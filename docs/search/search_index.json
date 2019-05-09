@@ -1,0 +1,319 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "About CDBC\n\n\n\n\nCDBC can provide proxy access to Cloud Database. It consists of CDBC Client and CDBC Service.CDBC Client connect to CDBC Service which can provide proxy access to Database.\nCDBC Service use WCF and run on Microsoft IIS so Windows instance on cloud is needed. \n\n\n\nHow to get CDBC\n\n\n\n\nYou can download CDBC service and client from following page. \n\nhttps://cdbc.cloud/download.html\n\n\nYou can also get CDBC client from NuGet .",
+            "title": "Getting Started"
+        },
+        {
+            "location": "/#about-cdbc",
+            "text": "CDBC can provide proxy access to Cloud Database. It consists of CDBC Client and CDBC Service.CDBC Client connect to CDBC Service which can provide proxy access to Database.\nCDBC Service use WCF and run on Microsoft IIS so Windows instance on cloud is needed.",
+            "title": "About CDBC"
+        },
+        {
+            "location": "/#how-to-get-cdbc",
+            "text": "You can download CDBC service and client from following page.  https://cdbc.cloud/download.html  You can also get CDBC client from NuGet .",
+            "title": "How to get CDBC"
+        },
+        {
+            "location": "/setupservice/setupservice/",
+            "text": "How to set up CDBC service\n\n\n\n\n\n\nInstall IIS\n\n\nDeploy CDBC service\n\n\nConfig CDBC service",
+            "title": "Index"
+        },
+        {
+            "location": "/setupservice/setupservice/#how-to-set-up-cdbc-service",
+            "text": "Install IIS  Deploy CDBC service  Config CDBC service",
+            "title": "How to set up CDBC service"
+        },
+        {
+            "location": "/setupservice/installiis/",
+            "text": "install IIS\n\n\n\n\n\n\nOpen Server Manager\n\n\n\n\nClick the \u201cAdd roles and features\u201d text.\n\n\n\n\nOn the \u201cBefore you begin\u201d window, click the Next button.\n\n\n\nOn the \"Select installation type\" window, leave \u201cRole-based or feature-based installation\u201d selected and click Next.\n\n\n\nAs we're installing to our local machine, leave \u201cSelect a server from the server pool\u201d with the current machine selected and click Next.\n\n\n\n\nFrom the \"Select server roles\" window, check the box next to \u201cWeb Server (IIS)\u201d. \n\n   When additional features and feature wizard window pop up, click the \u201cAdd Features\u201d button.\n\n   Click Next after back to \"Select server roles\" window\n\n\n\nIn the \"features\" window, Click \".NET framework 4.6 features\",  check  \"ASP.NET 4.6\" and  \"WCF Services\" - \"HTTP activation\".\n\n   When additional features and feature wizard window pop up, click the \u201cAdd Features\u201d button. \n\n   Click Next after back to \"features\" window\n\n\n\nClick Next on the \u201cWeb Server Role (IIS)\u201d window.\n\n\n\nIn the \"Select role services\" window, Check \"ASP.NET 4.6\" under \"application development\" . Click Next.\n\n\n\nFinally on the \u201cConfirm installation selections\u201d window , review the items that are to be installed and click Install.\n\n\n\nOnce the installation has succeeded, click the close button.\n\n\n\nWe can perform test by opening up a web browser and browsing to the server that we have installed IIS on. You should see the default IIS page.",
+            "title": "Install IIS"
+        },
+        {
+            "location": "/setupservice/installiis/#install-iis",
+            "text": "Open Server Manager   Click the \u201cAdd roles and features\u201d text.   On the \u201cBefore you begin\u201d window, click the Next button.  On the \"Select installation type\" window, leave \u201cRole-based or feature-based installation\u201d selected and click Next.  As we're installing to our local machine, leave \u201cSelect a server from the server pool\u201d with the current machine selected and click Next.   From the \"Select server roles\" window, check the box next to \u201cWeb Server (IIS)\u201d.  \n   When additional features and feature wizard window pop up, click the \u201cAdd Features\u201d button. \n   Click Next after back to \"Select server roles\" window  In the \"features\" window, Click \".NET framework 4.6 features\",  check  \"ASP.NET 4.6\" and  \"WCF Services\" - \"HTTP activation\". \n   When additional features and feature wizard window pop up, click the \u201cAdd Features\u201d button.  \n   Click Next after back to \"features\" window  Click Next on the \u201cWeb Server Role (IIS)\u201d window.  In the \"Select role services\" window, Check \"ASP.NET 4.6\" under \"application development\" . Click Next.  Finally on the \u201cConfirm installation selections\u201d window , review the items that are to be installed and click Install.  Once the installation has succeeded, click the close button.  We can perform test by opening up a web browser and browsing to the server that we have installed IIS on. You should see the default IIS page.",
+            "title": "install IIS"
+        },
+        {
+            "location": "/setupservice/deployservice/",
+            "text": "Setup IIS  to CDBC\n\n\n\n\nSetup CDBC service\n\n\n\n\nSetup CDBC service\n\n\nInstall CDBC client\n\n\nUsing CDBC.client\n\n\n\n\nQuerying with the DataReader\n\n\n\n\nQuerying with the DataAdapter\n\n\nQuerying with the DataAdapter\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
+            "title": "Deploy CDBC service"
+        },
+        {
+            "location": "/setupservice/deployservice/#setup-iis-to-cdbc",
+            "text": "",
+            "title": "Setup IIS  to CDBC"
+        },
+        {
+            "location": "/setupservice/deployservice/#setup-cdbc-service",
+            "text": "",
+            "title": "Setup CDBC service"
+        },
+        {
+            "location": "/setupservice/deployservice/#setup-cdbc-service_1",
+            "text": "",
+            "title": "Setup CDBC service"
+        },
+        {
+            "location": "/setupservice/deployservice/#install-cdbc-client",
+            "text": "",
+            "title": "Install CDBC client"
+        },
+        {
+            "location": "/setupservice/deployservice/#using-cdbcclient",
+            "text": "",
+            "title": "Using CDBC.client"
+        },
+        {
+            "location": "/setupservice/deployservice/#querying-with-the-datareader",
+            "text": "",
+            "title": "Querying with the DataReader"
+        },
+        {
+            "location": "/setupservice/deployservice/#querying-with-the-dataadapter",
+            "text": "",
+            "title": "Querying with the DataAdapter"
+        },
+        {
+            "location": "/setupservice/deployservice/#querying-with-the-dataadapter_1",
+            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.",
+            "title": "Querying with the DataAdapter"
+        },
+        {
+            "location": "/setupservice/deployservice/#project-layout",
+            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
+            "title": "Project layout"
+        },
+        {
+            "location": "/setupservice/configservice/",
+            "text": "Setup IIS  to CDBC\n\n\n\n\nSetup CDBC service\n\n\n\n\nSetup CDBC service\n\n\nInstall CDBC client\n\n\nUsing CDBC.client\n\n\n\n\nQuerying with the DataReader\n\n\n\n\nQuerying with the DataAdapter\n\n\nQuerying with the DataAdapter\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
+            "title": "Config CDBC service"
+        },
+        {
+            "location": "/setupservice/configservice/#setup-iis-to-cdbc",
+            "text": "",
+            "title": "Setup IIS  to CDBC"
+        },
+        {
+            "location": "/setupservice/configservice/#setup-cdbc-service",
+            "text": "",
+            "title": "Setup CDBC service"
+        },
+        {
+            "location": "/setupservice/configservice/#setup-cdbc-service_1",
+            "text": "",
+            "title": "Setup CDBC service"
+        },
+        {
+            "location": "/setupservice/configservice/#install-cdbc-client",
+            "text": "",
+            "title": "Install CDBC client"
+        },
+        {
+            "location": "/setupservice/configservice/#using-cdbcclient",
+            "text": "",
+            "title": "Using CDBC.client"
+        },
+        {
+            "location": "/setupservice/configservice/#querying-with-the-datareader",
+            "text": "",
+            "title": "Querying with the DataReader"
+        },
+        {
+            "location": "/setupservice/configservice/#querying-with-the-dataadapter",
+            "text": "",
+            "title": "Querying with the DataAdapter"
+        },
+        {
+            "location": "/setupservice/configservice/#querying-with-the-dataadapter_1",
+            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.",
+            "title": "Querying with the DataAdapter"
+        },
+        {
+            "location": "/setupservice/configservice/#project-layout",
+            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
+            "title": "Project layout"
+        },
+        {
+            "location": "/usingcdbcclient/clientconfiguration/",
+            "text": "CDBC Client Configuration\n\n\n\n\nCDBC Service use WCF architecture. WCF information should be set in the app.config file.\n\n\nSample XML\n\n\n\n\n<system.serviceModel>\n    <bindings>\n      <webHttpBinding>\n        <binding name=\"BasicHttpBinding_ICdbcService\" maxReceivedMessageSize=\"10485760\" useDefaultWebProxy=\"false\"/>\n      </webHttpBinding>\n      <basicHttpBinding>\n        <binding name=\"BasicHttpBinding_ICdbcService\" maxReceivedMessageSize=\"10485760\" useDefaultWebProxy=\"false\"\n                 sendTimeout=\"00:10:00\"\n                     />\n      </basicHttpBinding>\n    </bindings>\n    <client>\n      <endpoint address=\"https://cdbc.cloud/cdbcservice/CdbcService.svc/service\" binding=\"basicHttpBinding\" bindingConfiguration=\"BasicHttpBinding_ICdbcService\"\n          contract=\"CdbcService.ICdbcService\" name=\"CdbcService.ICdbcService\"  />\n    </client>\n    <behaviors>\n      <endpointBehaviors>\n        <behavior name=\"webhttp\">\n          <webHttp/>\n          <soapProcessing />\n        </behavior>\n      </endpointBehaviors>\n    </behaviors>\n  </system.serviceModel>\n\n\n\n\nclient-endpoint\n\n* \naddress\n - URL of CDBC service.\n\n\nDetails",
+            "title": "Client Configuration"
+        },
+        {
+            "location": "/usingcdbcclient/clientconfiguration/#cdbc-client-configuration",
+            "text": "CDBC Service use WCF architecture. WCF information should be set in the app.config file.",
+            "title": "CDBC Client Configuration"
+        },
+        {
+            "location": "/usingcdbcclient/clientconfiguration/#sample-xml",
+            "text": "<system.serviceModel>\n    <bindings>\n      <webHttpBinding>\n        <binding name=\"BasicHttpBinding_ICdbcService\" maxReceivedMessageSize=\"10485760\" useDefaultWebProxy=\"false\"/>\n      </webHttpBinding>\n      <basicHttpBinding>\n        <binding name=\"BasicHttpBinding_ICdbcService\" maxReceivedMessageSize=\"10485760\" useDefaultWebProxy=\"false\"\n                 sendTimeout=\"00:10:00\"\n                     />\n      </basicHttpBinding>\n    </bindings>\n    <client>\n      <endpoint address=\"https://cdbc.cloud/cdbcservice/CdbcService.svc/service\" binding=\"basicHttpBinding\" bindingConfiguration=\"BasicHttpBinding_ICdbcService\"\n          contract=\"CdbcService.ICdbcService\" name=\"CdbcService.ICdbcService\"  />\n    </client>\n    <behaviors>\n      <endpointBehaviors>\n        <behavior name=\"webhttp\">\n          <webHttp/>\n          <soapProcessing />\n        </behavior>\n      </endpointBehaviors>\n    </behaviors>\n  </system.serviceModel>  client-endpoint \n*  address  - URL of CDBC service.",
+            "title": "Sample XML"
+        },
+        {
+            "location": "/usingcdbcclient/clientconfiguration/#details",
+            "text": "",
+            "title": "Details"
+        },
+        {
+            "location": "/usingcdbcclient/usingclientoracle/",
+            "text": "CDBC Client Configuration\n\n\n\n\nCDBC Service use WCF architecture. WCF information should be set in the app.config file.\n\n\n<system.serviceModel>\n    <bindings>\n      <webHttpBinding>\n        <binding name=\"BasicHttpBinding_ICdbcService\" maxReceivedMessageSize=\"10485760\" useDefaultWebProxy=\"false\"/>\n      </webHttpBinding>\n      <basicHttpBinding>\n        <binding name=\"BasicHttpBinding_ICdbcService\" maxReceivedMessageSize=\"10485760\" useDefaultWebProxy=\"false\"\n                 sendTimeout=\"00:10:00\"\n                     />\n      </basicHttpBinding>\n    </bindings>\n    <client>\n      <endpoint address=\"https://cdbc.cloud/cdbcservice/CdbcService.svc/service\" binding=\"basicHttpBinding\" bindingConfiguration=\"BasicHttpBinding_ICdbcService\"\n          contract=\"CdbcService.ICdbcService\" name=\"CdbcService.ICdbcService\"  />\n    </client>\n    <behaviors>\n      <endpointBehaviors>\n        <behavior name=\"webhttp\">\n          <webHttp/>\n          <soapProcessing />\n        </behavior>\n      </endpointBehaviors>\n    </behaviors>\n  </system.serviceModel>\n\n\n\n\nclient-endpoint\n\n* \naddress\n - URL of CDBC service.\n\n\nCreating CdbcConnection\n\n\n\n\nC#\n\n\n//Same as ODP.net,  \nstring connString = \"Data Source=(DESCRIPTION =(ADDRESS_LIST =(ADDRESS = (PROTOCOL = TCP)(HOST = ***.***.***.***)(PORT = 1521)))(CONNECT_DATA =(SERVICE_NAME = ***)));Persist Security Info=True;User ID=*;Password=*\";\nCdbcConnection conn = new CdbcConnection(connString);\n\nconn.DatabaseProduct = CdbcCommon.Data.Client.Type.DatabaseProductType.Oracle;\nconn.UserId = \"unittest\";\nconn.Psk = \"***************\";\n\n\n\n\n\nQuerying with the DataReader\n\n\n\n\n\n\nC#\n\n\n//Same as ODP.net,  \nstring connString = \"Data Source=(DESCRIPTION =(ADDRESS_LIST =(ADDRESS = (PROTOCOL = TCP)(HOST = ***.***.***.***)(PORT = 1521)))(CONNECT_DATA =(SERVICE_NAME = ***)));Persist Security Info=True;User ID=*;Password=*\";\nCdbcConnection conn = new CdbcConnection(connString);\n\nconn.DatabaseProduct = CdbcCommon.Data.Client.Type.DatabaseProductType.Oracle;\nconn.UserId = \"unittest\";\nconn.Psk = \"***************\";\n\nCdbcCommand cmd = new CdbcCommand(\"SELECT * FROM ALL_TABLES\", conn);\nDbDataReader dr = cmd.ExecuteReader();\n\nwhile (dr.Read())\n{\n    Console.WriteLine(String.Format(\"{0}\", dr[0]));\n}\n\n\n\n\nVB.Net\n\n\nstring connectionString = \"DataSource=C:\\\\My.accdb\";\n\nusing (AccessConnection connection = new AccessConnection(connectionString)) {\n  AccessCommand cmd = new AccessCommand(\"SELECT * FROM Orders\", connection);\n\n  AccessDataReader rdr = cmd.ExecuteReader();\n\n  while (rdr.Read()) {\n    Console.WriteLine(String.Format(\"\\t{0} --> \\t\\t{1}\", rdr[\"ShipName\"], rdr[\"ShipCity\"]));\n  }\n}\n\n\n\n\nQuerying with the DataAdapter\n\n\n\n\nCdbcAdapter's Fill method can retrieve data from the data source having save  syntax with other sql client.  \n\n\nC#\n\n\nstring connectionString = \"DataSource=C:\\\\My.accdb\";\n\nusing (AccessConnection connection = new AccessConnection(connectionString)) {\n  AccessCommand cmd = new AccessCommand(\"SELECT * FROM Orders\", connection);\n\n  AccessDataReader rdr = cmd.ExecuteReader();\n\n  while (rdr.Read()) {\n    Console.WriteLine(String.Format(\"\\t{0} --> \\t\\t{1}\", rdr[\"ShipName\"], rdr[\"ShipCity\"]));\n  }\n}\n\n\n\n\nVB.Net\n\n\nstring connectionString = \"DataSource=C:\\\\My.accdb\";\n\nusing (AccessConnection connection = new AccessConnection(connectionString)) {\n  AccessCommand cmd = new AccessCommand(\"SELECT * FROM Orders\", connection);\n\n  AccessDataReader rdr = cmd.ExecuteReader();\n\n  while (rdr.Read()) {\n    Console.WriteLine(String.Format(\"\\t{0} --> \\t\\t{1}\", rdr[\"ShipName\"], rdr[\"ShipCity\"]));\n  }\n}\n\n\n\n\nUpdate with the DataAdapter\n\n\n\n\nExecuteNonQuery with the CdbcCommand\n\n\n\n\nExecuteScalar with the CdbcCommand\n\n\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
+            "title": "How to access Oracle"
+        },
+        {
+            "location": "/usingcdbcclient/usingclientoracle/#cdbc-client-configuration",
+            "text": "CDBC Service use WCF architecture. WCF information should be set in the app.config file.  <system.serviceModel>\n    <bindings>\n      <webHttpBinding>\n        <binding name=\"BasicHttpBinding_ICdbcService\" maxReceivedMessageSize=\"10485760\" useDefaultWebProxy=\"false\"/>\n      </webHttpBinding>\n      <basicHttpBinding>\n        <binding name=\"BasicHttpBinding_ICdbcService\" maxReceivedMessageSize=\"10485760\" useDefaultWebProxy=\"false\"\n                 sendTimeout=\"00:10:00\"\n                     />\n      </basicHttpBinding>\n    </bindings>\n    <client>\n      <endpoint address=\"https://cdbc.cloud/cdbcservice/CdbcService.svc/service\" binding=\"basicHttpBinding\" bindingConfiguration=\"BasicHttpBinding_ICdbcService\"\n          contract=\"CdbcService.ICdbcService\" name=\"CdbcService.ICdbcService\"  />\n    </client>\n    <behaviors>\n      <endpointBehaviors>\n        <behavior name=\"webhttp\">\n          <webHttp/>\n          <soapProcessing />\n        </behavior>\n      </endpointBehaviors>\n    </behaviors>\n  </system.serviceModel>  client-endpoint \n*  address  - URL of CDBC service.",
+            "title": "CDBC Client Configuration"
+        },
+        {
+            "location": "/usingcdbcclient/usingclientoracle/#creating-cdbcconnection",
+            "text": "C#  //Same as ODP.net,  \nstring connString = \"Data Source=(DESCRIPTION =(ADDRESS_LIST =(ADDRESS = (PROTOCOL = TCP)(HOST = ***.***.***.***)(PORT = 1521)))(CONNECT_DATA =(SERVICE_NAME = ***)));Persist Security Info=True;User ID=*;Password=*\";\nCdbcConnection conn = new CdbcConnection(connString);\n\nconn.DatabaseProduct = CdbcCommon.Data.Client.Type.DatabaseProductType.Oracle;\nconn.UserId = \"unittest\";\nconn.Psk = \"***************\";",
+            "title": "Creating CdbcConnection"
+        },
+        {
+            "location": "/usingcdbcclient/usingclientoracle/#querying-with-the-datareader",
+            "text": "C#  //Same as ODP.net,  \nstring connString = \"Data Source=(DESCRIPTION =(ADDRESS_LIST =(ADDRESS = (PROTOCOL = TCP)(HOST = ***.***.***.***)(PORT = 1521)))(CONNECT_DATA =(SERVICE_NAME = ***)));Persist Security Info=True;User ID=*;Password=*\";\nCdbcConnection conn = new CdbcConnection(connString);\n\nconn.DatabaseProduct = CdbcCommon.Data.Client.Type.DatabaseProductType.Oracle;\nconn.UserId = \"unittest\";\nconn.Psk = \"***************\";\n\nCdbcCommand cmd = new CdbcCommand(\"SELECT * FROM ALL_TABLES\", conn);\nDbDataReader dr = cmd.ExecuteReader();\n\nwhile (dr.Read())\n{\n    Console.WriteLine(String.Format(\"{0}\", dr[0]));\n}  VB.Net  string connectionString = \"DataSource=C:\\\\My.accdb\";\n\nusing (AccessConnection connection = new AccessConnection(connectionString)) {\n  AccessCommand cmd = new AccessCommand(\"SELECT * FROM Orders\", connection);\n\n  AccessDataReader rdr = cmd.ExecuteReader();\n\n  while (rdr.Read()) {\n    Console.WriteLine(String.Format(\"\\t{0} --> \\t\\t{1}\", rdr[\"ShipName\"], rdr[\"ShipCity\"]));\n  }\n}",
+            "title": "Querying with the DataReader"
+        },
+        {
+            "location": "/usingcdbcclient/usingclientoracle/#querying-with-the-dataadapter",
+            "text": "CdbcAdapter's Fill method can retrieve data from the data source having save  syntax with other sql client.    C#  string connectionString = \"DataSource=C:\\\\My.accdb\";\n\nusing (AccessConnection connection = new AccessConnection(connectionString)) {\n  AccessCommand cmd = new AccessCommand(\"SELECT * FROM Orders\", connection);\n\n  AccessDataReader rdr = cmd.ExecuteReader();\n\n  while (rdr.Read()) {\n    Console.WriteLine(String.Format(\"\\t{0} --> \\t\\t{1}\", rdr[\"ShipName\"], rdr[\"ShipCity\"]));\n  }\n}  VB.Net  string connectionString = \"DataSource=C:\\\\My.accdb\";\n\nusing (AccessConnection connection = new AccessConnection(connectionString)) {\n  AccessCommand cmd = new AccessCommand(\"SELECT * FROM Orders\", connection);\n\n  AccessDataReader rdr = cmd.ExecuteReader();\n\n  while (rdr.Read()) {\n    Console.WriteLine(String.Format(\"\\t{0} --> \\t\\t{1}\", rdr[\"ShipName\"], rdr[\"ShipCity\"]));\n  }\n}",
+            "title": "Querying with the DataAdapter"
+        },
+        {
+            "location": "/usingcdbcclient/usingclientoracle/#update-with-the-dataadapter",
+            "text": "",
+            "title": "Update with the DataAdapter"
+        },
+        {
+            "location": "/usingcdbcclient/usingclientoracle/#executenonquery-with-the-cdbccommand",
+            "text": "",
+            "title": "ExecuteNonQuery with the CdbcCommand"
+        },
+        {
+            "location": "/usingcdbcclient/usingclientoracle/#executescalar-with-the-cdbccommand",
+            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.",
+            "title": "ExecuteScalar with the CdbcCommand"
+        },
+        {
+            "location": "/usingcdbcclient/usingclientoracle/#project-layout",
+            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
+            "title": "Project layout"
+        },
+        {
+            "location": "/usingcdbcclient/usingclientsqlserver/",
+            "text": "CDBC Client Configuration\n\n\n\n\nCDBC Service use WCF architecture. WCF information should be set in the app.config file.\n\n\n<system.serviceModel>\n    <bindings>\n      <webHttpBinding>\n        <binding name=\"BasicHttpBinding_ICdbcService\" maxReceivedMessageSize=\"10485760\" useDefaultWebProxy=\"false\"/>\n      </webHttpBinding>\n      <basicHttpBinding>\n        <binding name=\"BasicHttpBinding_ICdbcService\" maxReceivedMessageSize=\"10485760\" useDefaultWebProxy=\"false\"\n                 sendTimeout=\"00:10:00\"\n                     />\n      </basicHttpBinding>\n    </bindings>\n    <client>\n      <endpoint address=\"https://cdbc.cloud/cdbcservice/CdbcService.svc/service\" binding=\"basicHttpBinding\" bindingConfiguration=\"BasicHttpBinding_ICdbcService\"\n          contract=\"CdbcService.ICdbcService\" name=\"CdbcService.ICdbcService\"  />\n    </client>\n    <behaviors>\n      <endpointBehaviors>\n        <behavior name=\"webhttp\">\n          <webHttp/>\n          <soapProcessing />\n        </behavior>\n      </endpointBehaviors>\n    </behaviors>\n  </system.serviceModel>\n\n\n\n\nclient-endpoint\n\n* \naddress\n - URL of CDBC service.\n\n\nCreating CdbcConnection\n\n\n\n\nC#\n\n\n//Same as ODP.net,  \nstring connString = \"Data Source=(DESCRIPTION =(ADDRESS_LIST =(ADDRESS = (PROTOCOL = TCP)(HOST = ***.***.***.***)(PORT = 1521)))(CONNECT_DATA =(SERVICE_NAME = ***)));Persist Security Info=True;User ID=*;Password=*\";\nCdbcConnection conn = new CdbcConnection(connString);\n\nconn.DatabaseProduct = CdbcCommon.Data.Client.Type.DatabaseProductType.Oracle;\nconn.UserId = \"unittest\";\nconn.Psk = \"***************\";\n\n\n\n\n\nQuerying with the DataReader\n\n\n\n\n\n\nC#\n\n\n//Same as ODP.net,  \nstring connString = \"Data Source=(DESCRIPTION =(ADDRESS_LIST =(ADDRESS = (PROTOCOL = TCP)(HOST = ***.***.***.***)(PORT = 1521)))(CONNECT_DATA =(SERVICE_NAME = ***)));Persist Security Info=True;User ID=*;Password=*\";\nCdbcConnection conn = new CdbcConnection(connString);\n\nconn.DatabaseProduct = CdbcCommon.Data.Client.Type.DatabaseProductType.Oracle;\nconn.UserId = \"unittest\";\nconn.Psk = \"***************\";\n\nCdbcCommand cmd = new CdbcCommand(\"SELECT * FROM ALL_TABLES\", conn);\nDbDataReader dr = cmd.ExecuteReader();\n\nwhile (dr.Read())\n{\n    Console.WriteLine(String.Format(\"{0}\", dr[0]));\n}\n\n\n\n\nVB.Net\n\n\nstring connectionString = \"DataSource=C:\\\\My.accdb\";\n\nusing (AccessConnection connection = new AccessConnection(connectionString)) {\n  AccessCommand cmd = new AccessCommand(\"SELECT * FROM Orders\", connection);\n\n  AccessDataReader rdr = cmd.ExecuteReader();\n\n  while (rdr.Read()) {\n    Console.WriteLine(String.Format(\"\\t{0} --> \\t\\t{1}\", rdr[\"ShipName\"], rdr[\"ShipCity\"]));\n  }\n}\n\n\n\n\nQuerying with the DataAdapter\n\n\n\n\nCdbcAdapter's Fill method can retrieve data from the data source having save  syntax with other sql client.  \n\n\nC#\n\n\nstring connectionString = \"DataSource=C:\\\\My.accdb\";\n\nusing (AccessConnection connection = new AccessConnection(connectionString)) {\n  AccessCommand cmd = new AccessCommand(\"SELECT * FROM Orders\", connection);\n\n  AccessDataReader rdr = cmd.ExecuteReader();\n\n  while (rdr.Read()) {\n    Console.WriteLine(String.Format(\"\\t{0} --> \\t\\t{1}\", rdr[\"ShipName\"], rdr[\"ShipCity\"]));\n  }\n}\n\n\n\n\nVB.Net\n\n\nstring connectionString = \"DataSource=C:\\\\My.accdb\";\n\nusing (AccessConnection connection = new AccessConnection(connectionString)) {\n  AccessCommand cmd = new AccessCommand(\"SELECT * FROM Orders\", connection);\n\n  AccessDataReader rdr = cmd.ExecuteReader();\n\n  while (rdr.Read()) {\n    Console.WriteLine(String.Format(\"\\t{0} --> \\t\\t{1}\", rdr[\"ShipName\"], rdr[\"ShipCity\"]));\n  }\n}\n\n\n\n\nUpdate with the DataAdapter\n\n\n\n\nExecuteNonQuery with the CdbcCommand\n\n\n\n\nExecuteScalar with the CdbcCommand\n\n\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
+            "title": "How to access SQL Server"
+        },
+        {
+            "location": "/usingcdbcclient/usingclientsqlserver/#cdbc-client-configuration",
+            "text": "CDBC Service use WCF architecture. WCF information should be set in the app.config file.  <system.serviceModel>\n    <bindings>\n      <webHttpBinding>\n        <binding name=\"BasicHttpBinding_ICdbcService\" maxReceivedMessageSize=\"10485760\" useDefaultWebProxy=\"false\"/>\n      </webHttpBinding>\n      <basicHttpBinding>\n        <binding name=\"BasicHttpBinding_ICdbcService\" maxReceivedMessageSize=\"10485760\" useDefaultWebProxy=\"false\"\n                 sendTimeout=\"00:10:00\"\n                     />\n      </basicHttpBinding>\n    </bindings>\n    <client>\n      <endpoint address=\"https://cdbc.cloud/cdbcservice/CdbcService.svc/service\" binding=\"basicHttpBinding\" bindingConfiguration=\"BasicHttpBinding_ICdbcService\"\n          contract=\"CdbcService.ICdbcService\" name=\"CdbcService.ICdbcService\"  />\n    </client>\n    <behaviors>\n      <endpointBehaviors>\n        <behavior name=\"webhttp\">\n          <webHttp/>\n          <soapProcessing />\n        </behavior>\n      </endpointBehaviors>\n    </behaviors>\n  </system.serviceModel>  client-endpoint \n*  address  - URL of CDBC service.",
+            "title": "CDBC Client Configuration"
+        },
+        {
+            "location": "/usingcdbcclient/usingclientsqlserver/#creating-cdbcconnection",
+            "text": "C#  //Same as ODP.net,  \nstring connString = \"Data Source=(DESCRIPTION =(ADDRESS_LIST =(ADDRESS = (PROTOCOL = TCP)(HOST = ***.***.***.***)(PORT = 1521)))(CONNECT_DATA =(SERVICE_NAME = ***)));Persist Security Info=True;User ID=*;Password=*\";\nCdbcConnection conn = new CdbcConnection(connString);\n\nconn.DatabaseProduct = CdbcCommon.Data.Client.Type.DatabaseProductType.Oracle;\nconn.UserId = \"unittest\";\nconn.Psk = \"***************\";",
+            "title": "Creating CdbcConnection"
+        },
+        {
+            "location": "/usingcdbcclient/usingclientsqlserver/#querying-with-the-datareader",
+            "text": "C#  //Same as ODP.net,  \nstring connString = \"Data Source=(DESCRIPTION =(ADDRESS_LIST =(ADDRESS = (PROTOCOL = TCP)(HOST = ***.***.***.***)(PORT = 1521)))(CONNECT_DATA =(SERVICE_NAME = ***)));Persist Security Info=True;User ID=*;Password=*\";\nCdbcConnection conn = new CdbcConnection(connString);\n\nconn.DatabaseProduct = CdbcCommon.Data.Client.Type.DatabaseProductType.Oracle;\nconn.UserId = \"unittest\";\nconn.Psk = \"***************\";\n\nCdbcCommand cmd = new CdbcCommand(\"SELECT * FROM ALL_TABLES\", conn);\nDbDataReader dr = cmd.ExecuteReader();\n\nwhile (dr.Read())\n{\n    Console.WriteLine(String.Format(\"{0}\", dr[0]));\n}  VB.Net  string connectionString = \"DataSource=C:\\\\My.accdb\";\n\nusing (AccessConnection connection = new AccessConnection(connectionString)) {\n  AccessCommand cmd = new AccessCommand(\"SELECT * FROM Orders\", connection);\n\n  AccessDataReader rdr = cmd.ExecuteReader();\n\n  while (rdr.Read()) {\n    Console.WriteLine(String.Format(\"\\t{0} --> \\t\\t{1}\", rdr[\"ShipName\"], rdr[\"ShipCity\"]));\n  }\n}",
+            "title": "Querying with the DataReader"
+        },
+        {
+            "location": "/usingcdbcclient/usingclientsqlserver/#querying-with-the-dataadapter",
+            "text": "CdbcAdapter's Fill method can retrieve data from the data source having save  syntax with other sql client.    C#  string connectionString = \"DataSource=C:\\\\My.accdb\";\n\nusing (AccessConnection connection = new AccessConnection(connectionString)) {\n  AccessCommand cmd = new AccessCommand(\"SELECT * FROM Orders\", connection);\n\n  AccessDataReader rdr = cmd.ExecuteReader();\n\n  while (rdr.Read()) {\n    Console.WriteLine(String.Format(\"\\t{0} --> \\t\\t{1}\", rdr[\"ShipName\"], rdr[\"ShipCity\"]));\n  }\n}  VB.Net  string connectionString = \"DataSource=C:\\\\My.accdb\";\n\nusing (AccessConnection connection = new AccessConnection(connectionString)) {\n  AccessCommand cmd = new AccessCommand(\"SELECT * FROM Orders\", connection);\n\n  AccessDataReader rdr = cmd.ExecuteReader();\n\n  while (rdr.Read()) {\n    Console.WriteLine(String.Format(\"\\t{0} --> \\t\\t{1}\", rdr[\"ShipName\"], rdr[\"ShipCity\"]));\n  }\n}",
+            "title": "Querying with the DataAdapter"
+        },
+        {
+            "location": "/usingcdbcclient/usingclientsqlserver/#update-with-the-dataadapter",
+            "text": "",
+            "title": "Update with the DataAdapter"
+        },
+        {
+            "location": "/usingcdbcclient/usingclientsqlserver/#executenonquery-with-the-cdbccommand",
+            "text": "",
+            "title": "ExecuteNonQuery with the CdbcCommand"
+        },
+        {
+            "location": "/usingcdbcclient/usingclientsqlserver/#executescalar-with-the-cdbccommand",
+            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.",
+            "title": "ExecuteScalar with the CdbcCommand"
+        },
+        {
+            "location": "/usingcdbcclient/usingclientsqlserver/#project-layout",
+            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
+            "title": "Project layout"
+        },
+        {
+            "location": "/supportedapi/oraclesupported/",
+            "text": "About connecting to Oracle\n\n\nCDBC client offers easy access to remote Oracle database from .NET applications.\nIt has the similar ADO.NET architecture as ODP.NET.\nCode with familiar classes , properties and methods.\nBut it does not support all functions of ODP.NET.\nSupported properties and methods are listed below.\n\n\nVersion\n\n\nCdbcConnection\n\n\nSupported\n\n\nCdbcCommand\n\n\nCdbcAdapter\n\n\nCdbcCommandBuilder",
+            "title": "Oracle"
+        },
+        {
+            "location": "/supportedapi/oraclesupported/#about-connecting-to-oracle",
+            "text": "CDBC client offers easy access to remote Oracle database from .NET applications.\nIt has the similar ADO.NET architecture as ODP.NET.\nCode with familiar classes , properties and methods.\nBut it does not support all functions of ODP.NET.\nSupported properties and methods are listed below.",
+            "title": "About connecting to Oracle"
+        },
+        {
+            "location": "/supportedapi/oraclesupported/#version",
+            "text": "",
+            "title": "Version"
+        },
+        {
+            "location": "/supportedapi/oraclesupported/#cdbcconnection",
+            "text": "Supported",
+            "title": "CdbcConnection"
+        },
+        {
+            "location": "/supportedapi/oraclesupported/#cdbccommand",
+            "text": "",
+            "title": "CdbcCommand"
+        },
+        {
+            "location": "/supportedapi/oraclesupported/#cdbcadapter",
+            "text": "",
+            "title": "CdbcAdapter"
+        },
+        {
+            "location": "/supportedapi/oraclesupported/#cdbccommandbuilder",
+            "text": "",
+            "title": "CdbcCommandBuilder"
+        },
+        {
+            "location": "/supportedapi/sqlserversupported/",
+            "text": "About connecting to SQL Server\n\n\nCDBC client offers easy access to remote Oracle database from .NET applications.\nIt has the similar ADO.NET architecture as ODP.NET.\nCode with familiar classes , properties and methods.\nBut it does not support all functions of ODP.NET.\nSupported properties and methods are listed below.\n\n\nVersion\n\n\nCdbcConnection\n\n\nSupported\n\n\nCdbcCommand\n\n\nCdbcAdapter\n\n\nCdbcCommandBuilder",
+            "title": "SQL Server"
+        },
+        {
+            "location": "/supportedapi/sqlserversupported/#about-connecting-to-sql-server",
+            "text": "CDBC client offers easy access to remote Oracle database from .NET applications.\nIt has the similar ADO.NET architecture as ODP.NET.\nCode with familiar classes , properties and methods.\nBut it does not support all functions of ODP.NET.\nSupported properties and methods are listed below.",
+            "title": "About connecting to SQL Server"
+        },
+        {
+            "location": "/supportedapi/sqlserversupported/#version",
+            "text": "",
+            "title": "Version"
+        },
+        {
+            "location": "/supportedapi/sqlserversupported/#cdbcconnection",
+            "text": "Supported",
+            "title": "CdbcConnection"
+        },
+        {
+            "location": "/supportedapi/sqlserversupported/#cdbccommand",
+            "text": "",
+            "title": "CdbcCommand"
+        },
+        {
+            "location": "/supportedapi/sqlserversupported/#cdbcadapter",
+            "text": "",
+            "title": "CdbcAdapter"
+        },
+        {
+            "location": "/supportedapi/sqlserversupported/#cdbccommandbuilder",
+            "text": "",
+            "title": "CdbcCommandBuilder"
+        }
+    ]
+}
