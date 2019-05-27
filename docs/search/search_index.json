@@ -3,7 +3,7 @@
         {
             "location": "/",
             "text": "About CDBC\n\n\n\n\nCDBC can provide proxy access to Cloud Database. It consists of CDBC Client and CDBC Service.CDBC Client connect to CDBC Service which can provide proxy access to Database.\nCDBC Service use WCF and run on Microsoft IIS so Windows instance on cloud is needed. \n\n\n\nHow to get CDBC\n\n\n\n\nYou can download CDBC service and client from following page. \n\nhttps://cdbc.cloud/download.html\n\n\nYou can also get CDBC client from NuGet .",
-            "title": "Getting Started"
+            "title": "Home"
         },
         {
             "location": "/#about-cdbc",
@@ -14,6 +14,36 @@
             "location": "/#how-to-get-cdbc",
             "text": "You can download CDBC service and client from following page.  https://cdbc.cloud/download.html  You can also get CDBC client from NuGet .",
             "title": "How to get CDBC"
+        },
+        {
+            "location": "/start/",
+            "text": "How to get CDBC\n\n\n\n\nCDBC service\n\n\n\n\nCDBC service is WCF service and it should be deployed to windows IIS server.\n\n\nCdbc service 4.5.0.1905\n\n\nCDBC Client\n\n\n\n\nCDBC Client include dlls which can help to access CDBC service.\n\n\nCdbc Client 4.5.0.1905\n\n\nYou can also get CDBC client from NuGet .",
+            "title": "Getting Started"
+        },
+        {
+            "location": "/start/#how-to-get-cdbc",
+            "text": "",
+            "title": "How to get CDBC"
+        },
+        {
+            "location": "/start/#cdbc-service",
+            "text": "CDBC service is WCF service and it should be deployed to windows IIS server.",
+            "title": "CDBC service"
+        },
+        {
+            "location": "/start/#cdbc-service-4501905",
+            "text": "",
+            "title": "Cdbc service 4.5.0.1905"
+        },
+        {
+            "location": "/start/#cdbc-client",
+            "text": "CDBC Client include dlls which can help to access CDBC service.",
+            "title": "CDBC Client"
+        },
+        {
+            "location": "/start/#cdbc-client-4501905",
+            "text": "You can also get CDBC client from NuGet .",
+            "title": "Cdbc Client 4.5.0.1905"
         },
         {
             "location": "/setupservice/setupservice/",
@@ -37,13 +67,8 @@
         },
         {
             "location": "/setupservice/deployservice/",
-            "text": "Setup IIS  to CDBC\n\n\n\n\nSetup CDBC service\n\n\n\n\nSetup CDBC service\n\n\nInstall CDBC client\n\n\nUsing CDBC.client\n\n\n\n\nQuerying with the DataReader\n\n\n\n\nQuerying with the DataAdapter\n\n\nQuerying with the DataAdapter\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
+            "text": "Setup CDBC service\n\n\n\n\nDownload and unzip CDBC service.\n\n\nYou can download CDBC service flowlling URL\n\n\nCopy CDBC service files to IIS\n\n\nCopy the  folder CdbcService and its entire contents to iis home directory on your web server.\n\n\ne.g.\nC:\\inetpub\\wwwroot\\CdbcService\\\n\n\nConfig CDBC service\n\n\n\n\nConfirm CDBC service",
             "title": "Deploy CDBC service"
-        },
-        {
-            "location": "/setupservice/deployservice/#setup-iis-to-cdbc",
-            "text": "",
-            "title": "Setup IIS  to CDBC"
         },
         {
             "location": "/setupservice/deployservice/#setup-cdbc-service",
@@ -51,39 +76,24 @@
             "title": "Setup CDBC service"
         },
         {
-            "location": "/setupservice/deployservice/#setup-cdbc-service_1",
+            "location": "/setupservice/deployservice/#download-and-unzip-cdbc-service",
+            "text": "You can download CDBC service flowlling URL",
+            "title": "Download and unzip CDBC service."
+        },
+        {
+            "location": "/setupservice/deployservice/#copy-cdbc-service-files-to-iis",
+            "text": "Copy the  folder CdbcService and its entire contents to iis home directory on your web server.  e.g.\nC:\\inetpub\\wwwroot\\CdbcService\\",
+            "title": "Copy CDBC service files to IIS"
+        },
+        {
+            "location": "/setupservice/deployservice/#config-cdbc-service",
             "text": "",
-            "title": "Setup CDBC service"
+            "title": "Config CDBC service"
         },
         {
-            "location": "/setupservice/deployservice/#install-cdbc-client",
+            "location": "/setupservice/deployservice/#confirm-cdbc-service",
             "text": "",
-            "title": "Install CDBC client"
-        },
-        {
-            "location": "/setupservice/deployservice/#using-cdbcclient",
-            "text": "",
-            "title": "Using CDBC.client"
-        },
-        {
-            "location": "/setupservice/deployservice/#querying-with-the-datareader",
-            "text": "",
-            "title": "Querying with the DataReader"
-        },
-        {
-            "location": "/setupservice/deployservice/#querying-with-the-dataadapter",
-            "text": "",
-            "title": "Querying with the DataAdapter"
-        },
-        {
-            "location": "/setupservice/deployservice/#querying-with-the-dataadapter_1",
-            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.",
-            "title": "Querying with the DataAdapter"
-        },
-        {
-            "location": "/setupservice/deployservice/#project-layout",
-            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
-            "title": "Project layout"
+            "title": "Confirm CDBC service"
         },
         {
             "location": "/setupservice/configservice/",
@@ -314,6 +324,21 @@
             "location": "/supportedapi/sqlserversupported/#cdbccommandbuilder",
             "text": "",
             "title": "CdbcCommandBuilder"
+        },
+        {
+            "location": "/license/",
+            "text": "About CDBC\n\n\n\n\nCDBC can provide proxy access to Cloud Database. It consists of CDBC Client and CDBC Service.CDBC Client connect to CDBC Service which can provide proxy access to Database.\nCDBC Service use WCF and run on Microsoft IIS so Windows instance on cloud is needed. \n\n\n\nHow to get CDBC\n\n\n\n\nYou can download CDBC service and client from following page. \n\nhttps://cdbc.cloud/download.html\n\n\nYou can also get CDBC client from NuGet .",
+            "title": "License"
+        },
+        {
+            "location": "/license/#about-cdbc",
+            "text": "CDBC can provide proxy access to Cloud Database. It consists of CDBC Client and CDBC Service.CDBC Client connect to CDBC Service which can provide proxy access to Database.\nCDBC Service use WCF and run on Microsoft IIS so Windows instance on cloud is needed.",
+            "title": "About CDBC"
+        },
+        {
+            "location": "/license/#how-to-get-cdbc",
+            "text": "You can download CDBC service and client from following page.  https://cdbc.cloud/download.html  You can also get CDBC client from NuGet .",
+            "title": "How to get CDBC"
         }
     ]
 }
