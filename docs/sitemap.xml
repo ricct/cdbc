@@ -2,62 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://ricct.github.io/cdbc/</loc>
-     <lastmod>2019-05-27</lastmod>
+     <lastmod>2019-05-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://ricct.github.io/cdbc/start/</loc>
-     <lastmod>2019-05-27</lastmod>
+     <lastmod>2019-05-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://ricct.github.io/cdbc/setupservice/setupservice/</loc>
-     <lastmod>2019-05-27</lastmod>
+     <lastmod>2019-05-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://ricct.github.io/cdbc/setupservice/installiis/</loc>
-     <lastmod>2019-05-27</lastmod>
+     <lastmod>2019-05-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://ricct.github.io/cdbc/setupservice/deployservice/</loc>
-     <lastmod>2019-05-27</lastmod>
+     <lastmod>2019-05-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://ricct.github.io/cdbc/setupservice/configservice/</loc>
-     <lastmod>2019-05-27</lastmod>
+     <lastmod>2019-05-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://ricct.github.io/cdbc/usingcdbcclient/clientconfiguration/</loc>
-     <lastmod>2019-05-27</lastmod>
+     <lastmod>2019-05-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://ricct.github.io/cdbc/usingcdbcclient/usingclientoracle/</loc>
-     <lastmod>2019-05-27</lastmod>
+     <lastmod>2019-05-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://ricct.github.io/cdbc/usingcdbcclient/usingclientsqlserver/</loc>
-     <lastmod>2019-05-27</lastmod>
+     <lastmod>2019-05-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://ricct.github.io/cdbc/supportedapi/oraclesupported/</loc>
-     <lastmod>2019-05-27</lastmod>
+     <lastmod>2019-05-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://ricct.github.io/cdbc/supportedapi/sqlserversupported/</loc>
-     <lastmod>2019-05-27</lastmod>
+     <lastmod>2019-05-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://ricct.github.io/cdbc/license/</loc>
-     <lastmod>2019-05-27</lastmod>
+     <lastmod>2019-05-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

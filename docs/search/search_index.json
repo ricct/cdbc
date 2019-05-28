@@ -17,7 +17,7 @@
         },
         {
             "location": "/start/",
-            "text": "How to get CDBC\n\n\n\n\nCDBC service\n\n\n\n\nCDBC service is WCF service and it should be deployed to windows IIS server.\n\n\nCdbc service 4.5.0.1905\n\n\nCDBC Client\n\n\n\n\nCDBC Client include dlls which can help to access CDBC service.\n\n\nCdbc Client 4.5.0.1905\n\n\nYou can also get CDBC client from NuGet .",
+            "text": "How to get CDBC\n\n\n\n\nCDBC service\n\n\nCDBC service is WCF service and it should be deployed to windows IIS server.\n\n\nCdbc service 4.5.0.1905\n\n\n\n\nCDBC Client\n\n\nCDBC Client include dlls which can help to access CDBC service.\n\n\nCdbc Client 4.5.0.1905\n\n\nWe recommend that you'd better to get CDBC client from NuGet.",
             "title": "Getting Started"
         },
         {
@@ -42,7 +42,7 @@
         },
         {
             "location": "/start/#cdbc-client-4501905",
-            "text": "You can also get CDBC client from NuGet .",
+            "text": "We recommend that you'd better to get CDBC client from NuGet.",
             "title": "Cdbc Client 4.5.0.1905"
         },
         {
