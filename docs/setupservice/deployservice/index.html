@@ -8,7 +8,7 @@
         <meta name="author" content="RiCCT">
         <link rel="canonical" href="https://cdbc.ricct.com/setupservice/deployservice/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Deploy CDBC service - CDBC(Coming Soon)</title>
+        <title>Deploy CDBC service - CDBC(β Version)</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -47,7 +47,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="../..">CDBC(Coming Soon)</a>
+            <a class="navbar-brand" href="../..">CDBC(β Version)</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -81,6 +81,40 @@
 </li>
                         </ul>
                     </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Using CDBC Client <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../usingcdbcclient/clientconfiguration/">Client Configuration</a>
+</li>
+                            
+<li >
+    <a href="../../usingcdbcclient/usingclientoracle/">How to access Oracle</a>
+</li>
+                            
+<li >
+    <a href="../../usingcdbcclient/usingclientsqlserver/">How to access SQL Server</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documents <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../supportedapi/oraclesupported/">Oracle</a>
+</li>
+                            
+<li >
+    <a href="../../supportedapi/sqlserversupported/">SQL Server</a>
+</li>
+                            
+<li >
+    <a href="../../license/">License</a>
+</li>
+                        </ul>
+                    </li>
                 </ul>
 
             <ul class="nav navbar-nav navbar-right">
@@ -107,16 +141,17 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#setup-cdbc-service">Setup CDBC service</a></li>
+        <li class="main active"><a href="#deploy-cdbc-service">Deploy CDBC service</a></li>
             <li><a href="#download-and-unzip-cdbc-service">Download and unzip CDBC service.</a></li>
             <li><a href="#copy-cdbc-service-files-to-iis">Copy CDBC service files to IIS</a></li>
-        <li class="main "><a href="#convert-the-cdbc-service-folder-into-an-application">convert the cdbc service folder into an Application</a></li>
+        <li class="main "><a href="#convert-the-cdbc-service-folder-into-an-application">Convert the cdbc service folder into an Application</a></li>
         <li class="main "><a href="#confirm-cdbc-service">Confirm CDBC service</a></li>
+        <li class="main "><a href="#configure-cdbc-service">Configure CDBC service</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="setup-cdbc-service">Setup CDBC service</h1>
+<h1 id="deploy-cdbc-service">Deploy CDBC service</h1>
 <hr />
 <h2 id="download-and-unzip-cdbc-service">Download and unzip CDBC service.</h2>
 <p>You can download CDBC service from the following page.<br />
@@ -126,7 +161,7 @@
 <img src="../img/delopyservice/copyservicefolder.png" alt="" title="" width="700"><br />
 e.g.
 C:\inetpub\wwwroot\CdbcService\</p>
-<h1 id="convert-the-cdbc-service-folder-into-an-application">convert the cdbc service folder into an Application</h1>
+<h1 id="convert-the-cdbc-service-folder-into-an-application">Convert the cdbc service folder into an Application</h1>
 <hr />
 <ol>
 <li>
@@ -138,11 +173,11 @@ C:\inetpub\wwwroot\CdbcService\</p>
 <img src="../img/delopyservice/20.png" alt="" title="">  </p>
 </li>
 <li>
-<p>Click OK<br />
-<img src="../img/delopyservice/30.png" alt="" title="">  </p>
+<p>When Add application window pop up, click the “OK” button.
+<img src="../img/delopyservice/30.png" alt="" title=""><br />
+You can customize the values if you wanted. </p>
 </li>
 </ol>
-<p>You can customize the values if you wanted. </p>
 <h1 id="confirm-cdbc-service">Confirm CDBC service</h1>
 <hr />
 <p>Navigate <a href="http://localhost/CdbcService/CdbcService.svc">http://localhost/CdbcService/CdbcService.svc</a> and <a href="http://localhost/CdbcService/">http://localhost/CdbcService/</a>.<br />
@@ -151,6 +186,11 @@ You should see default cdbc page.<br />
 <ul>
 <li>You can change localhost into the IP address or your hostname.</li>
 </ul>
+<h1 id="configure-cdbc-service">Configure CDBC service</h1>
+<hr />
+<p>Next step is config CDBC service.<br />
+<a href="../configservice/">Config CDBC service</a></p>
+<hr />
 <p><a href="../../setupservice/setupservice/">Back to index page</a></p></div>
         </div>
 

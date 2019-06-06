@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="RiCCT">
-        <link rel="canonical" href="https://cdbc.ricct.com/setupservice/installiis/">
+        <link rel="canonical" href="https://cdbc.ricct.com/usingcdbcclient/usingclientsqlserver/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Install IIS - CDBC(β Version)</title>
+        <title>How to access SQL Server - CDBC(β Version)</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -60,41 +60,41 @@
                     <li >
                         <a href="../../start/">Getting Started</a>
                     </li>
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Setup CDBC Service <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             
 <li >
-    <a href="../setupservice/">Index</a>
-</li>
-                            
-<li class="active">
-    <a href="./">Install IIS</a>
+    <a href="../../setupservice/setupservice/">Index</a>
 </li>
                             
 <li >
-    <a href="../deployservice/">Deploy CDBC service</a>
+    <a href="../../setupservice/installiis/">Install IIS</a>
 </li>
                             
 <li >
-    <a href="../configservice/">Config CDBC service</a>
+    <a href="../../setupservice/deployservice/">Deploy CDBC service</a>
+</li>
+                            
+<li >
+    <a href="../../setupservice/configservice/">Config CDBC service</a>
 </li>
                         </ul>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Using CDBC Client <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             
 <li >
-    <a href="../../usingcdbcclient/clientconfiguration/">Client Configuration</a>
+    <a href="../clientconfiguration/">Client Configuration</a>
 </li>
                             
 <li >
-    <a href="../../usingcdbcclient/usingclientoracle/">How to access Oracle</a>
+    <a href="../usingclientoracle/">How to access Oracle</a>
 </li>
                             
-<li >
-    <a href="../../usingcdbcclient/usingclientsqlserver/">How to access SQL Server</a>
+<li class="active">
+    <a href="./">How to access SQL Server</a>
 </li>
                         </ul>
                     </li>
@@ -124,12 +124,12 @@
                     </a>
                 </li>
                     <li >
-                        <a rel="next" href="../setupservice/">
+                        <a rel="next" href="../usingclientoracle/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../deployservice/">
+                        <a rel="prev" href="../../supportedapi/oraclesupported/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -141,44 +141,146 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#install-iis">install IIS</a></li>
+        <li class="main active"><a href="#cdbc-client-configuration">CDBC Client Configuration</a></li>
+        <li class="main "><a href="#creating-cdbcconnection">Creating CdbcConnection</a></li>
+        <li class="main "><a href="#querying-with-the-datareader">Querying with the DataReader</a></li>
+        <li class="main "><a href="#querying-with-the-dataadapter">Querying with the DataAdapter</a></li>
+        <li class="main "><a href="#update-with-the-dataadapter">Update with the DataAdapter</a></li>
+        <li class="main "><a href="#executenonquery-with-the-cdbccommand">ExecuteNonQuery with the CdbcCommand</a></li>
+        <li class="main "><a href="#executescalar-with-the-cdbccommand">ExecuteScalar with the CdbcCommand</a></li>
+            <li><a href="#project-layout">Project layout</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="install-iis">install IIS</h1>
+<h1 id="cdbc-client-configuration">CDBC Client Configuration</h1>
 <hr />
-<ol>
-<li>Open Server Manager<br />
-<img src="../img/setupiis/00.png" alt="" title=""></li>
-<li>Click the “Add roles and features” text.<br />
-<img src="../img/setupiis/10.png" alt="" title="" width="700"></li>
-<li>On the “Before you begin” window, click the Next button.
-<img src="../img/setupiis/20.png" alt="" title="" width="700"></li>
-<li>On the "Select installation type" window, leave “Role-based or feature-based installation” selected and click Next.
-<img src="../img/setupiis/30.png" alt="" title="" width="700"></li>
-<li>As we're installing to our local machine, leave “Select a server from the server pool” with the current machine selected and click Next.<br />
-<img src="../img/setupiis/40.png" alt="" title="" width="700"></li>
-<li>From the "Select server roles" window, check the box next to “Web Server (IIS)”. <br />
-   When additional features and feature wizard window pop up, click the “Add Features” button.<br />
-   Click Next after back to "Select server roles" window
-<img src="../img/setupiis/50.png" alt="" title="" width="700"></li>
-<li>In the "features" window, Click ".NET framework 4.6 features",  check  "ASP.NET 4.6" and  "WCF Services" - "HTTP activation".<br />
-   When additional features and feature wizard window pop up, click the “Add Features” button. <br />
-   Click Next after back to "features" window
-<img src="../img/setupiis/70.png" alt="" title="" width="700"></li>
-<li>Click Next on the “Web Server Role (IIS)” window.
-<img src="../img/setupiis/90.png" alt="" title="" width="700"></li>
-<li>In the "Select role services" window, Check "ASP.NET 4.6" under "application development" . Click Next.
-<img src="../img/setupiis/100.png" alt="" title="" width="700"></li>
-<li>Finally on the “Confirm installation selections” window , review the items that are to be installed and click Install.
-<img src="../img/setupiis/110.png" alt="" title="" width="700"></li>
-<li>Once the installation has succeeded, click the close button.
-<img src="../img/setupiis/130.png" alt="" title="" width="700"></li>
-<li>We can perform test by opening up a web browser and browsing to the server that we have installed IIS on. You should see the default IIS page.
-<img src="../img/setupiis/iis.png" alt="" title="" width="700"></li>
-</ol>
-<p><a href="../../setupservice/setupservice/">Back to index page</a></p></div>
+<p>CDBC Service use WCF architecture. WCF information should be set in the app.config file.</p>
+<pre><code class="XML">&lt;system.serviceModel&gt;
+    &lt;bindings&gt;
+      &lt;webHttpBinding&gt;
+        &lt;binding name=&quot;BasicHttpBinding_ICdbcService&quot; maxReceivedMessageSize=&quot;10485760&quot; useDefaultWebProxy=&quot;false&quot;/&gt;
+      &lt;/webHttpBinding&gt;
+      &lt;basicHttpBinding&gt;
+        &lt;binding name=&quot;BasicHttpBinding_ICdbcService&quot; maxReceivedMessageSize=&quot;10485760&quot; useDefaultWebProxy=&quot;false&quot;
+                 sendTimeout=&quot;00:10:00&quot;
+                     /&gt;
+      &lt;/basicHttpBinding&gt;
+    &lt;/bindings&gt;
+    &lt;client&gt;
+      &lt;endpoint address=&quot;https://cdbc.cloud/cdbcservice/CdbcService.svc/service&quot; binding=&quot;basicHttpBinding&quot; bindingConfiguration=&quot;BasicHttpBinding_ICdbcService&quot;
+          contract=&quot;CdbcService.ICdbcService&quot; name=&quot;CdbcService.ICdbcService&quot;  /&gt;
+    &lt;/client&gt;
+    &lt;behaviors&gt;
+      &lt;endpointBehaviors&gt;
+        &lt;behavior name=&quot;webhttp&quot;&gt;
+          &lt;webHttp/&gt;
+          &lt;soapProcessing /&gt;
+        &lt;/behavior&gt;
+      &lt;/endpointBehaviors&gt;
+    &lt;/behaviors&gt;
+  &lt;/system.serviceModel&gt;
+</code></pre>
+
+<p>client-endpoint<br />
+* <code>address</code> - URL of CDBC service.</p>
+<h1 id="creating-cdbcconnection">Creating CdbcConnection</h1>
+<hr />
+<p>C#</p>
+<pre><code class="c#">//Same as ODP.net,  
+string connString = &quot;Data Source=(DESCRIPTION =(ADDRESS_LIST =(ADDRESS = (PROTOCOL = TCP)(HOST = ***.***.***.***)(PORT = 1521)))(CONNECT_DATA =(SERVICE_NAME = ***)));Persist Security Info=True;User ID=*;Password=*&quot;;
+CdbcConnection conn = new CdbcConnection(connString);
+
+conn.DatabaseProduct = CdbcCommon.Data.Client.Type.DatabaseProductType.Oracle;
+conn.UserId = &quot;unittest&quot;;
+conn.Psk = &quot;***************&quot;;
+
+</code></pre>
+
+<h1 id="querying-with-the-datareader">Querying with the DataReader</h1>
+<hr />
+<p><img alt="エビフライトライアングル" src="../../img/111.jpg" title="サンプル" /></p>
+<p>C#</p>
+<pre><code class="c#">//Same as ODP.net,  
+string connString = &quot;Data Source=(DESCRIPTION =(ADDRESS_LIST =(ADDRESS = (PROTOCOL = TCP)(HOST = ***.***.***.***)(PORT = 1521)))(CONNECT_DATA =(SERVICE_NAME = ***)));Persist Security Info=True;User ID=*;Password=*&quot;;
+CdbcConnection conn = new CdbcConnection(connString);
+
+conn.DatabaseProduct = CdbcCommon.Data.Client.Type.DatabaseProductType.Oracle;
+conn.UserId = &quot;unittest&quot;;
+conn.Psk = &quot;***************&quot;;
+
+CdbcCommand cmd = new CdbcCommand(&quot;SELECT * FROM ALL_TABLES&quot;, conn);
+DbDataReader dr = cmd.ExecuteReader();
+
+while (dr.Read())
+{
+    Console.WriteLine(String.Format(&quot;{0}&quot;, dr[0]));
+}
+</code></pre>
+
+<p>VB.Net</p>
+<pre><code class="vb.net">string connectionString = &quot;DataSource=C:\\My.accdb&quot;;
+
+using (AccessConnection connection = new AccessConnection(connectionString)) {
+  AccessCommand cmd = new AccessCommand(&quot;SELECT * FROM Orders&quot;, connection);
+
+  AccessDataReader rdr = cmd.ExecuteReader();
+
+  while (rdr.Read()) {
+    Console.WriteLine(String.Format(&quot;\t{0} --&gt; \t\t{1}&quot;, rdr[&quot;ShipName&quot;], rdr[&quot;ShipCity&quot;]));
+  }
+}
+</code></pre>
+
+<h1 id="querying-with-the-dataadapter">Querying with the DataAdapter</h1>
+<hr />
+<p>CdbcAdapter's Fill method can retrieve data from the data source having save  syntax with other sql client.  </p>
+<p>C#</p>
+<pre><code class="c#">string connectionString = &quot;DataSource=C:\\My.accdb&quot;;
+
+using (AccessConnection connection = new AccessConnection(connectionString)) {
+  AccessCommand cmd = new AccessCommand(&quot;SELECT * FROM Orders&quot;, connection);
+
+  AccessDataReader rdr = cmd.ExecuteReader();
+
+  while (rdr.Read()) {
+    Console.WriteLine(String.Format(&quot;\t{0} --&gt; \t\t{1}&quot;, rdr[&quot;ShipName&quot;], rdr[&quot;ShipCity&quot;]));
+  }
+}
+</code></pre>
+
+<p>VB.Net</p>
+<pre><code class="vb.net">string connectionString = &quot;DataSource=C:\\My.accdb&quot;;
+
+using (AccessConnection connection = new AccessConnection(connectionString)) {
+  AccessCommand cmd = new AccessCommand(&quot;SELECT * FROM Orders&quot;, connection);
+
+  AccessDataReader rdr = cmd.ExecuteReader();
+
+  while (rdr.Read()) {
+    Console.WriteLine(String.Format(&quot;\t{0} --&gt; \t\t{1}&quot;, rdr[&quot;ShipName&quot;], rdr[&quot;ShipCity&quot;]));
+  }
+}
+</code></pre>
+
+<h1 id="update-with-the-dataadapter">Update with the DataAdapter</h1>
+<hr />
+<h1 id="executenonquery-with-the-cdbccommand">ExecuteNonQuery with the CdbcCommand</h1>
+<hr />
+<h1 id="executescalar-with-the-cdbccommand">ExecuteScalar with the CdbcCommand</h1>
+<hr />
+<ul>
+<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
+<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
+<li><code>mkdocs build</code> - Build the documentation site.</li>
+<li><code>mkdocs help</code> - Print this help message.</li>
+</ul>
+<h2 id="project-layout">Project layout</h2>
+<pre><code>mkdocs.yml    # The configuration file.
+docs/
+    index.md  # The documentation homepage.
+    ...       # Other markdown pages, images and other files.
+</code></pre></div>
         </div>
 
         <footer class="col-md-12">

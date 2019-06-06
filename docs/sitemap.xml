@@ -2,32 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://cdbc.ricct.com/</loc>
-     <lastmod>2019-05-29</lastmod>
+     <lastmod>2019-06-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://cdbc.ricct.com/start/</loc>
-     <lastmod>2019-05-29</lastmod>
+     <lastmod>2019-06-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://cdbc.ricct.com/setupservice/setupservice/</loc>
-     <lastmod>2019-05-29</lastmod>
+     <lastmod>2019-06-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://cdbc.ricct.com/setupservice/installiis/</loc>
-     <lastmod>2019-05-29</lastmod>
+     <lastmod>2019-06-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://cdbc.ricct.com/setupservice/deployservice/</loc>
-     <lastmod>2019-05-29</lastmod>
+     <lastmod>2019-06-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://cdbc.ricct.com/setupservice/configservice/</loc>
-     <lastmod>2019-05-29</lastmod>
+     <lastmod>2019-06-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://cdbc.ricct.com/usingcdbcclient/clientconfiguration/</loc>
+     <lastmod>2019-06-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://cdbc.ricct.com/usingcdbcclient/usingclientoracle/</loc>
+     <lastmod>2019-06-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://cdbc.ricct.com/usingcdbcclient/usingclientsqlserver/</loc>
+     <lastmod>2019-06-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://cdbc.ricct.com/supportedapi/oraclesupported/</loc>
+     <lastmod>2019-06-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://cdbc.ricct.com/supportedapi/sqlserversupported/</loc>
+     <lastmod>2019-06-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://cdbc.ricct.com/license/</loc>
+     <lastmod>2019-06-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

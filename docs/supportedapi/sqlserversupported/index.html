@@ -6,22 +6,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="RiCCT">
-        
-        <link rel="shortcut icon" href="/img/favicon.ico">
-        <title>CDBC(β Version)</title>
-        <link href="/css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="/css/font-awesome-4.5.0.css" rel="stylesheet">
-        <link href="/css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="/css/highlight.css">
+        <link rel="canonical" href="https://cdbc.ricct.com/supportedapi/sqlserversupported/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>SQL Server - CDBC(β Version)</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
 
-        <script src="/js/jquery-1.10.2.min.js"></script>
-        <script src="/js/bootstrap-3.0.3.min.js"></script>
-        <script src="/js/highlight.pack.js"></script>
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -47,7 +47,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">CDBC(β Version)</a>
+            <a class="navbar-brand" href="../..">CDBC(β Version)</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -55,29 +55,29 @@
                 <!-- Main navigation -->
                 <ul class="nav navbar-nav">
                     <li >
-                        <a href="/">Home</a>
+                        <a href="../..">Home</a>
                     </li>
                     <li >
-                        <a href="/start/">Getting Started</a>
+                        <a href="../../start/">Getting Started</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Setup CDBC Service <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             
 <li >
-    <a href="/setupservice/setupservice/">Index</a>
+    <a href="../../setupservice/setupservice/">Index</a>
 </li>
                             
 <li >
-    <a href="/setupservice/installiis/">Install IIS</a>
+    <a href="../../setupservice/installiis/">Install IIS</a>
 </li>
                             
 <li >
-    <a href="/setupservice/deployservice/">Deploy CDBC service</a>
+    <a href="../../setupservice/deployservice/">Deploy CDBC service</a>
 </li>
                             
 <li >
-    <a href="/setupservice/configservice/">Config CDBC service</a>
+    <a href="../../setupservice/configservice/">Config CDBC service</a>
 </li>
                         </ul>
                     </li>
@@ -86,32 +86,32 @@
                         <ul class="dropdown-menu">
                             
 <li >
-    <a href="/usingcdbcclient/clientconfiguration/">Client Configuration</a>
+    <a href="../../usingcdbcclient/clientconfiguration/">Client Configuration</a>
 </li>
                             
 <li >
-    <a href="/usingcdbcclient/usingclientoracle/">How to access Oracle</a>
+    <a href="../../usingcdbcclient/usingclientoracle/">How to access Oracle</a>
 </li>
                             
 <li >
-    <a href="/usingcdbcclient/usingclientsqlserver/">How to access SQL Server</a>
+    <a href="../../usingcdbcclient/usingclientsqlserver/">How to access SQL Server</a>
 </li>
                         </ul>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documents <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             
 <li >
-    <a href="/supportedapi/oraclesupported/">Oracle</a>
+    <a href="../oraclesupported/">Oracle</a>
+</li>
+                            
+<li class="active">
+    <a href="./">SQL Server</a>
 </li>
                             
 <li >
-    <a href="/supportedapi/sqlserversupported/">SQL Server</a>
-</li>
-                            
-<li >
-    <a href="/license/">License</a>
+    <a href="../../license/">License</a>
 </li>
                         </ul>
                     </li>
@@ -123,21 +123,46 @@
                         <i class="fa fa-search"></i> Search
                     </a>
                 </li>
+                    <li >
+                        <a rel="next" href="../oraclesupported/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../../license/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
             </ul>
         </div>
     </div>
 </div>
 
         <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#about-connecting-to-sql-server">About connecting to SQL Server</a></li>
+        <li class="main "><a href="#version">Version</a></li>
+        <li class="main "><a href="#cdbcconnection">CdbcConnection</a></li>
+        <li class="main "><a href="#cdbccommand">CdbcCommand</a></li>
+        <li class="main "><a href="#cdbcadapter">CdbcAdapter</a></li>
+        <li class="main "><a href="#cdbccommandbuilder">CdbcCommandBuilder</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
 
-    <div class="row-fluid">
-      <div id="main-content" class="span12">
-        <h1 id="404-page-not-found" style="text-align: center">404</h1>
-        <p style="text-align: center"><strong>Page not found</strong></p>
-      </div>
-    </div>
-
-
+<h1 id="about-connecting-to-sql-server">About connecting to SQL Server</h1>
+<p>CDBC client offers easy access to remote Oracle database from .NET applications.
+It has the similar ADO.NET architecture as ODP.NET.
+Code with familiar classes , properties and methods.
+But it does not support all functions of ODP.NET.
+Supported properties and methods are listed below.</p>
+<h1 id="version">Version</h1>
+<h1 id="cdbcconnection">CdbcConnection</h1>
+<p>Supported</p>
+<h1 id="cdbccommand">CdbcCommand</h1>
+<h1 id="cdbcadapter">CdbcAdapter</h1>
+<h1 id="cdbccommandbuilder">CdbcCommandBuilder</h1></div>
         </div>
 
         <footer class="col-md-12">
@@ -145,10 +170,10 @@
                 <p>Copyright RiCCT and/or its affiliates. All rights reserved.</p>
             <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
-        <script>var base_url = '';</script>
-        <script src="/js/base.js"></script>
-        <script src="/search/require.js"></script>
-        <script src="/search/search.js"></script>
+        <script>var base_url = '../..';</script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/require.js"></script>
+        <script src="../../search/search.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">

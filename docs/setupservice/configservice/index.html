@@ -8,7 +8,7 @@
         <meta name="author" content="RiCCT">
         <link rel="canonical" href="https://cdbc.ricct.com/setupservice/configservice/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Config CDBC service - CDBC(Coming Soon)</title>
+        <title>Config CDBC service - CDBC(β Version)</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -47,7 +47,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="../..">CDBC(Coming Soon)</a>
+            <a class="navbar-brand" href="../..">CDBC(β Version)</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -81,6 +81,40 @@
 </li>
                         </ul>
                     </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Using CDBC Client <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../usingcdbcclient/clientconfiguration/">Client Configuration</a>
+</li>
+                            
+<li >
+    <a href="../../usingcdbcclient/usingclientoracle/">How to access Oracle</a>
+</li>
+                            
+<li >
+    <a href="../../usingcdbcclient/usingclientsqlserver/">How to access SQL Server</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documents <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../supportedapi/oraclesupported/">Oracle</a>
+</li>
+                            
+<li >
+    <a href="../../supportedapi/sqlserversupported/">SQL Server</a>
+</li>
+                            
+<li >
+    <a href="../../license/">License</a>
+</li>
+                        </ul>
+                    </li>
                 </ul>
 
             <ul class="nav navbar-nav navbar-right">
@@ -94,8 +128,8 @@
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
-                    <li class="disabled">
-                        <a rel="prev" >
+                    <li >
+                        <a rel="prev" href="../../usingcdbcclient/clientconfiguration/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -107,43 +141,347 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#setup-iis-to-cdbc">Setup IIS  to CDBC</a></li>
-        <li class="main "><a href="#setup-cdbc-service">Setup CDBC service</a></li>
-            <li><a href="#setup-cdbc-service_1">Setup CDBC service</a></li>
-            <li><a href="#install-cdbc-client">Install CDBC client</a></li>
-        <li class="main "><a href="#using-cdbcclient">Using CDBC.client</a></li>
-            <li><a href="#querying-with-the-datareader">Querying with the DataReader</a></li>
-            <li><a href="#querying-with-the-dataadapter">Querying with the DataAdapter</a></li>
-            <li><a href="#querying-with-the-dataadapter_1">Querying with the DataAdapter</a></li>
-            <li><a href="#project-layout">Project layout</a></li>
+        <li class="main active"><a href="#config-cdbc-service">Config CDBC service</a></li>
+        <li class="main "><a href="#configsections">&lt;configSections&gt;</a></li>
+        <li class="main "><a href="#cdbcservice">&lt;cdbcService&gt;</a></li>
+            <li><a href="#userauthentication">&lt;userAuthentication&gt;</a></li>
+            <li><a href="#clientapplicationauthentication">&lt;clientApplicationAuthentication&gt;</a></li>
+            <li><a href="#idps">&lt;idps&gt;</a></li>
+            <li><a href="#connectionstrings">&lt;connectionStrings&gt;</a></li>
+            <li><a href="#cdbcserviceinfo">&lt;cdbcServiceInfo&gt;</a></li>
+        <li class="main "><a href="#log4net">&lt;log4net&gt;</a></li>
+        <li class="main "><a href="#servicemodel">&lt;serviceModel&gt;</a></li>
+        <li class="main "><a href="#systemruntimecaching">&lt;system.runtime.caching&gt;</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="setup-iis-to-cdbc">Setup IIS  to CDBC</h1>
+<h1 id="config-cdbc-service">Config CDBC service</h1>
 <hr />
-<h1 id="setup-cdbc-service">Setup CDBC service</h1>
+<h1 id="configsections"><code>&lt;configSections&gt;</code></h1>
+<p><strong>XML</strong></p>
+<pre><code class="XML">  &lt;configSections&gt;
+    &lt;section name=&quot;log4net&quot; type=&quot;log4net.Config.Log4NetConfigurationSectionHandler, log4net&quot;/&gt;
+    &lt;section name=&quot;cdbcService&quot; type=&quot;CdbcServiceUtils.Config.CdbcConfigurationSectionHandler, CdbcServiceUtils&quot;/&gt;
+  &lt;/configSections&gt;
+</code></pre>
+
+<p><strong>Description</strong></p>
+<pre><code>Used to add configuration section declaration.Please don't change it.
+</code></pre>
+<h1 id="cdbcservice"><code>&lt;cdbcService&gt;</code></h1>
+<p><strong>XML</strong></p>
+<pre><code class="XML">  &lt;cdbcService&gt;
+    &lt;userAuthentication authMethod=&quot;None or UserPsk&quot;&gt;
+      &lt;authenticatedUsers&gt;
+        &lt;add userId=&quot;&quot; userPsk=&quot;&quot; comment=&quot;&quot;/&gt;
+      &lt;/authenticatedUsers&gt;
+    &lt;/userAuthentication&gt;
+    &lt;clientApplicationAuthentication authMethod=&quot;None or ApplicationPsk&quot;&gt;
+      &lt;authenticatedApplications&gt;
+        &lt;add applicationId=&quot;&quot; applicationPsk=&quot;&quot; comment=&quot;&quot; /&gt;
+      &lt;/authenticatedApplications&gt;
+    &lt;/clientApplicationAuthentication&gt;
+    &lt;idps enabled=&quot;true&quot; accessBlockFailureCount=&quot;3&quot; accessBlockSeconds=&quot;5&quot; failureResetSeconds=&quot;600&quot;/&gt;
+    &lt;connectionStrings&gt;
+      &lt;add name=&quot;&quot; connectionString=&quot;&quot; providerName=&quot;&quot;/&gt;
+    &lt;/connectionStrings&gt;
+    &lt;cdbcServiceInfo serviceVersion=&quot;4.5.0.1905&quot; supportedClientVersion=&quot;4.5.0.1905&quot; infoHtmlFile=&quot;index.html&quot;/&gt;
+  &lt;/cdbcService&gt;
+
+</code></pre>
+
+<p><strong>Description</strong></p>
+<pre><code>Configurations used by cdbcService.
+</code></pre>
+<h2 id="userauthentication"><code>&lt;userAuthentication&gt;</code></h2>
+<pre><code>Only authenticated user can access cdbc service.
+You can configure user authorization method and psks in this session.
+</code></pre>
+<p><strong>Attributes</strong>  </p>
+<table>
+<thead>
+<tr>
+<th align="left">Attribute</th>
+<th align="left">Description</th>
+<th align="left">Value</th>
+<th align="left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">authMethod</td>
+<td align="left">User authorization method.</td>
+<td align="left"><code>None</code> or <code>UserPsk</code></td>
+<td align="left"><code>None</code> - No user authorization. Any user can access the service. <br/> <code>UserPsk</code> - Use Pre-Shared Key for each user.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="authenticatedusers"><code>&lt;authenticatedUsers&gt;</code></h3>
+<p><add userId="" userPsk="" comment=""/>
+<strong>Description</strong></p>
+<pre><code>Authenticated user list can be stored in the authenticatedUsers section. 
+You can use the AuthenticatedUsersCollection to retrieve authenticated users from application configuration files. 
+Its properties map to authenticated user attributes, allowing you to retrieve a single authenticated user specifying the userId.
+</code></pre>
+<p><strong>Attributes</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Attribute</th>
+<th align="left">Description</th>
+<th align="left">Value</th>
+<th align="left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">userId</td>
+<td align="left">User ID</td>
+<td align="left">String</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">userPsk</td>
+<td align="left">User psk (16 digital)</td>
+<td align="left">String</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">comment</td>
+<td align="left">Comment of the user, It will not be used by the system</td>
+<td align="left">String</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="clientapplicationauthentication"><code>&lt;clientApplicationAuthentication&gt;</code></h2>
+<p><strong>Description</strong>
+    Only authenticated client application can access cdbc service.
+    You can configure client application authorization method and psks in this session</p>
+<p><strong>Attributes</strong>  </p>
+<table>
+<thead>
+<tr>
+<th align="left">Attribute</th>
+<th align="left">Description</th>
+<th align="left">Value</th>
+<th align="left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">authMethod</td>
+<td align="left">Client application authorization method.</td>
+<td align="left"><code>None</code> or <code>ApplicationPsk</code></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="authenticatedapplications"><code>&lt;authenticatedApplications&gt;</code></h3>
+<p><add applicationId="" applicationPsk="" comment="" /></p>
+<p><strong>Description</strong></p>
+<pre><code>Authenticated applications list can be stored in the authenticatedApplications section. 
+You can use the AuthenticatedApplicationsCollection to retrieve authenticated applications from application configuration files. 
+Its properties map to authenticated application attributes, allowing you to retrieve a single authenticated applcaition specifying the applicationId.
+</code></pre>
+<p><strong>Attributes</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Attribute</th>
+<th align="left">Description</th>
+<th align="left">Value</th>
+<th align="left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">applicationId</td>
+<td align="left">Applicaion ID</td>
+<td align="left">String</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">applicationPsk</td>
+<td align="left">Applicaion psk (16 digital)</td>
+<td align="left">String</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">comment</td>
+<td align="left">Comment of the applicaion, It will not be used by the system</td>
+<td align="left">String</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="idps"><code>&lt;idps&gt;</code></h2>
+<p><strong>Description</strong></p>
+<pre><code>Idps is used to block illegal access. 
+The IP address whill be blocked for a specified time period while authorization failed certain time.
+</code></pre>
+<p><strong>Attributes</strong>  </p>
+<table>
+<thead>
+<tr>
+<th align="left">Attribute</th>
+<th align="left">Description</th>
+<th align="left">Value</th>
+<th align="left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">enabled</td>
+<td align="left">Enable or disable Idps. If Idps is enabled , Cdbc service will block the IP address after authorization failed certain times.</td>
+<td align="left"><code>true</code> or <code>false</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">accessBlockFailureCount</td>
+<td align="left">Set the failure count while start to block access.</td>
+<td align="left">int</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">accessBlockSeconds</td>
+<td align="left">How many seconds will the IP be blocked.</td>
+<td align="left">int</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">failureResetSeconds</td>
+<td align="left">How many seconds will the failure count be reset.</td>
+<td align="left">int</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="connectionstrings"><code>&lt;connectionStrings&gt;</code></h2>
+<p><strong>Description</strong></p>
+<pre><code>Connection strings used by cdbc service can be stored in the connectionStrings section. 
+Please refer microsoft's document to see the details about connectionStrings.
+</code></pre>
+<h2 id="cdbcserviceinfo"><code>&lt;cdbcServiceInfo&gt;</code></h2>
+<p><strong>Description</strong></p>
+<pre><code>Information of the service version,supported client version etc.
+You should not change any value unless get our instruction.
+</code></pre>
+<p><strong>Attributes</strong>  </p>
+<table>
+<thead>
+<tr>
+<th align="left">Attribute</th>
+<th align="left">Description</th>
+<th align="left">Value</th>
+<th align="left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">serviceVersion</td>
+<td align="left">Current version of the Cdbc service.</td>
+<td align="left">String</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">supportedClientVersion</td>
+<td align="left">Supported client version. The client whose version &gt;=supportedClientVersion will be supported.</td>
+<td align="left">String</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">infoHtmlFile</td>
+<td align="left">The html file to be display while customer access service url.</td>
+<td align="left">String</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h1 id="log4net"><code>&lt;log4net&gt;</code></h1>
+<p><strong>XML</strong></p>
+<pre><code class="XML">  &lt;log4net&gt;
+    &lt;appender name=&quot;RollingLogFileAppenderSystem&quot; type=&quot;log4net.Appender.RollingFileAppender,log4net&quot;&gt;
+    ...
+    &lt;/appender&gt;
+    &lt;appender name=&quot;RollingLogFileAppenderAudit&quot; type=&quot;log4net.Appender.RollingFileAppender,log4net&quot;&gt;
+    ...
+    &lt;/appender&gt;
+    &lt;logger name=&quot;audit&quot;&gt;
+      &lt;appender-ref ref=&quot;RollingLogFileAppenderAudit&quot;/&gt;
+    &lt;/logger&gt;
+    &lt;logger name=&quot;system&quot;&gt;
+      &lt;appender-ref ref=&quot;RollingLogFileAppenderSystem&quot;/&gt;
+    &lt;/logger&gt;
+  &lt;/log4net&gt;
+
+</code></pre>
+
+<p><strong>Description</strong></p>
+<pre><code>Cdbc use log4net to log system and audit log.  
+Please refer log4net's document to see the details.
+</code></pre>
+<h1 id="servicemodel"><code>&lt;serviceModel&gt;</code></h1>
+<p><strong>XML</strong></p>
+<pre><code class="XML">  &lt;system.serviceModel&gt;
+    &lt;bindings&gt;
+      &lt;basicHttpBinding&gt;
+        &lt;binding maxReceivedMessageSize=&quot;102400000&quot;/&gt;
+      &lt;/basicHttpBinding&gt;
+      &lt;customBinding&gt;
+        &lt;binding name=&quot;helpPage&quot;&gt;
+          &lt;textMessageEncoding messageVersion=&quot;None&quot;/&gt;
+          &lt;httpTransport/&gt;
+        &lt;/binding&gt;
+      &lt;/customBinding&gt;
+    &lt;/bindings&gt;
+    &lt;services&gt;
+      &lt;service name=&quot;CdbcService&quot;&gt;
+        &lt;endpoint address=&quot;service&quot; binding=&quot;basicHttpBinding&quot; contract=&quot;ICdbcService&quot;/&gt;
+        &lt;endpoint address=&quot;&quot; binding=&quot;customBinding&quot; bindingConfiguration=&quot;helpPage&quot; contract=&quot;IHelpPage&quot;/&gt;
+      &lt;/service&gt;
+    &lt;/services&gt;
+    &lt;behaviors&gt;
+      &lt;serviceBehaviors&gt;
+        &lt;behavior&gt;
+          &lt;!-- To avoid disclosing metadata information, set the values below to false before deployment --&gt;
+          &lt;serviceMetadata httpGetEnabled=&quot;false&quot; httpsGetEnabled=&quot;false&quot;/&gt;
+          &lt;!-- To receive exception details in faults for debugging purposes, set the value below to true.  Set to false before deployment to avoid disclosing exception information --&gt;
+          &lt;serviceDebug includeExceptionDetailInFaults=&quot;false&quot; httpHelpPageEnabled=&quot;false&quot; httpsHelpPageEnabled=&quot;false&quot; /&gt;
+        &lt;/behavior&gt;
+      &lt;/serviceBehaviors&gt;
+    &lt;/behaviors&gt;
+    &lt;protocolMapping&gt;
+      &lt;add binding=&quot;basicHttpsBinding&quot; scheme=&quot;https&quot; /&gt;
+    &lt;/protocolMapping&gt;
+    &lt;serviceHostingEnvironment aspNetCompatibilityEnabled=&quot;true&quot; multipleSiteBindingsEnabled=&quot;true&quot; /&gt;
+  &lt;/system.serviceModel&gt;
+
+</code></pre>
+
+<p><strong>Description</strong></p>
+<pre><code>serviceModel session include some wcf configurations for cdbc service .
+Don't modify it unless you have deep knowledge about wcf.
+Please refer Microsoft's document to see the details.
+</code></pre>
+<h1 id="systemruntimecaching"><code>&lt;system.runtime.caching&gt;</code></h1>
+<p><strong>XML</strong></p>
+<pre><code class="XML">   &lt;system.runtime.caching&gt;
+    &lt;memoryCache&gt;
+      &lt;namedCaches&gt;
+        &lt;add name=&quot;Default&quot; physicalMemoryLimitPercentage=&quot;20&quot;/&gt;
+      &lt;/namedCaches&gt;
+    &lt;/memoryCache&gt;
+  &lt;/system.runtime.caching&gt;
+</code></pre>
+
+<p><strong>Description</strong></p>
+<pre><code>CDBC use memoryCache to improve performance. You can customize the values of memoryCache.
+Please refer Microsoft's document to see the details.
+</code></pre>
 <hr />
-<h2 id="setup-cdbc-service_1">Setup CDBC service</h2>
-<h2 id="install-cdbc-client">Install CDBC client</h2>
-<h1 id="using-cdbcclient">Using CDBC.client</h1>
-<hr />
-<h2 id="querying-with-the-datareader">Querying with the DataReader</h2>
-<p><img alt="エビフライトライアングル" src="../../img/111.jpg" title="サンプル" /></p>
-<h2 id="querying-with-the-dataadapter">Querying with the DataAdapter</h2>
-<h2 id="querying-with-the-dataadapter_1">Querying with the DataAdapter</h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs help</code> - Print this help message.</li>
-</ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre></div>
+<p><a href="../../setupservice/setupservice/">Back to index page</a></p></div>
         </div>
 
         <footer class="col-md-12">
