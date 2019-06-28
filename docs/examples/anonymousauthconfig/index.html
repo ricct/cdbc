@@ -1,0 +1,164 @@
+<!doctype html><html lang="en" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="description" content="CDBC document"><link rel="canonical" href="https://cdbc.ricct.com/examples/anonymousauthconfig/"><meta name="author" content="RiCCT"><meta name="lang:clipboard.copy" content="Copy to clipboard"><meta name="lang:clipboard.copied" content="Copied to clipboard"><meta name="lang:search.language" content="en"><meta name="lang:search.pipeline.stopwords" content="True"><meta name="lang:search.pipeline.trimmer" content="True"><meta name="lang:search.result.none" content="No matching documents"><meta name="lang:search.result.one" content="1 matching document"><meta name="lang:search.result.other" content="# matching documents"><meta name="lang:search.tokenizer" content="[\s\-]+"><link rel="shortcut icon" href="../../img/favicon.ico"><meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.3.1"><title>IIS Anonymous auth - CDBC(β Version)</title><link rel="stylesheet" href="../../assets/stylesheets/application.4031d38b.css"><link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css"><meta name="theme-color" content="#009688"><script src="../../assets/javascripts/modernizr.74668098.js"></script><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=swap"><style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style><link rel="stylesheet" href="../../assets/fonts/material-icons.css"><script>window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-140931398-1", "cdbc.ricct.com")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })</script><script async src="https://www.google-analytics.com/analytics.js"></script></head><body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal"><svg class="md-svg"><defs></defs></svg> <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off"> <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off"> <label class="md-overlay" data-md-component="overlay" for="__drawer"></label><a href="#configuration-example" tabindex="1" class="md-skip">Skip to content </a><header class="md-header" data-md-component="header"><nav class="md-header-nav md-grid"><div class="md-flex"><div class="md-flex__cell md-flex__cell--shrink"><a href="https://cdbc.ricct.com" title="CDBC(β Version)" class="md-header-nav__button md-logo"><img src="../../img/cdbclogowhite.png" width="24" height="24"></a></div><div class="md-flex__cell md-flex__cell--shrink"><label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label></div><div class="md-flex__cell md-flex__cell--stretch"><div class="md-flex__ellipsis md-header-nav__title" data-md-component="title"><span class="md-header-nav__topic">CDBC(β Version)</span><span class="md-header-nav__topic">IIS Anonymous auth</span></div></div><div class="md-flex__cell md-flex__cell--shrink"><label class="md-icon md-icon--search md-header-nav__button" for="__search"></label><div class="md-search" data-md-component="search" role="dialog"><label class="md-search__overlay" for="__search"></label><div class="md-search__inner" role="search"><form class="md-search__form" name="search"><input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active"> <label class="md-icon md-search__icon" for="__search"></label> <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">&#xE5CD;</button></form><div class="md-search__output"><div class="md-search__scrollwrap" data-md-scrollfix><div class="md-search-result" data-md-component="result"><div class="md-search-result__meta">Type to start searching</div><ol class="md-search-result__list"></ol></div></div></div></div></div></div></div></nav></header><div class="md-container"><main class="md-main"><div class="md-main__inner md-grid" data-md-component="container"><div class="md-sidebar md-sidebar--primary" data-md-component="navigation"><div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner"><nav class="md-nav md-nav--primary" data-md-level="0"><label class="md-nav__title md-nav__title--site" for="__drawer"><a href="https://cdbc.ricct.com" title="CDBC(β Version)" class="md-nav__button md-logo"><img src="../../img/cdbclogowhite.png" width="48" height="48"></a>CDBC(β Version)</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../.." title="Home" class="md-nav__link">Home</a></li><li class="md-nav__item"><a href="../../start/" title="Getting Started" class="md-nav__link">Getting Started</a></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3"><label class="md-nav__link" for="nav-3">Setup CDBC Service</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-3">Setup CDBC Service</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../setupservice/installiis/" title="Install IIS" class="md-nav__link">Install IIS</a></li><li class="md-nav__item"><a href="../../setupservice/deployservice/" title="Deploy CDBC service" class="md-nav__link">Deploy CDBC service</a></li><li class="md-nav__item"><a href="../../setupservice/configservice/" title="Config CDBC service" class="md-nav__link">Config CDBC service</a></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4"><label class="md-nav__link" for="nav-4">Using CDBC Client</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-4">Using CDBC Client</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../usingcdbcclient/clientinstall/" title="Client installation" class="md-nav__link">Client installation</a></li><li class="md-nav__item"><a href="../../usingcdbcclient/clientconfiguration/" title="Client Configuration" class="md-nav__link">Client Configuration</a></li></ul></nav></li><li class="md-nav__item md-nav__item--active md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked><label class="md-nav__link" for="nav-5">Examples</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-5">Examples</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item md-nav__item--active md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1" checked><label class="md-nav__link" for="nav-5-1">Configuration</label><nav class="md-nav" data-md-component="collapsible" data-md-level="2"><label class="md-nav__title" for="nav-5-1">Configuration</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item md-nav__item--active"><input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc"><label class="md-nav__link md-nav__link--active" for="__toc">IIS Anonymous auth</label><a href="./" title="IIS Anonymous auth" class="md-nav__link md-nav__link--active">IIS Anonymous auth</a><nav class="md-nav md-nav--secondary"><label class="md-nav__title" for="__toc">Table of contents</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="#overview" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item"><a href="#configurations" title="Configurations" class="md-nav__link">Configurations</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#case1-iis-use-anonymous-authentication" title="**Case1: IIS use anonymous authentication  **" class="md-nav__link">**Case1: IIS use anonymous authentication  **</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item"><a href="../basicauthconfig/" title="IIS Basic auth" class="md-nav__link">IIS Basic auth</a></li></ul></nav></li></ul></nav></li><li class="md-nav__item md-nav__item--nested"><input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6"><label class="md-nav__link" for="nav-6">License</label><nav class="md-nav" data-md-component="collapsible" data-md-level="1"><label class="md-nav__title" for="nav-6">License</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="../../license/licenseclient/" title="Cdbc Client" class="md-nav__link">Cdbc Client</a></li><li class="md-nav__item"><a href="../../license/licenseservice/" title="Cdbc Service" class="md-nav__link">Cdbc Service</a></li><li class="md-nav__item"><a href="../../license/thirdparty/" title="Third party license" class="md-nav__link">Third party license</a></li></ul></nav></li></ul></nav></div></div></div><div class="md-sidebar md-sidebar--secondary" data-md-component="toc"><div class="md-sidebar__scrollwrap"><div class="md-sidebar__inner"><nav class="md-nav md-nav--secondary"><label class="md-nav__title" for="__toc">Table of contents</label><ul class="md-nav__list" data-md-scrollfix><li class="md-nav__item"><a href="#overview" title="Overview" class="md-nav__link">Overview</a></li><li class="md-nav__item"><a href="#configurations" title="Configurations" class="md-nav__link">Configurations</a><nav class="md-nav"><ul class="md-nav__list"><li class="md-nav__item"><a href="#case1-iis-use-anonymous-authentication" title="**Case1: IIS use anonymous authentication  **" class="md-nav__link">**Case1: IIS use anonymous authentication  **</a></li></ul></nav></li></ul></nav></div></div></div><div class="md-content"><article class="md-content__inner md-typeset"><h1 id="configuration-example">Configuration Example</h1>
+<h2 id="overview">Overview</h2>
+<p>In this page ,we provide example configuration in case of your IIS use anonymous authentication.
+The example include sample configuration of <strong>system.serviceModel</strong> section both of service side and client side.</p>
+<h2 id="configurations">Configurations</h2>
+<h3 id="case1-iis-use-anonymous-authentication">**Case1: IIS use anonymous authentication  **</h3>
+<div class="admonition abstract">
+<p class="admonition-title">Description</p>
+<p>Here is example configuration in case of your IIS use anonymous authentication.<br />
+You can use the template and modify highlighted lines to fit your environment.</p>
+</div>
+<p>Configuration example <br />
+** Service configuration (web.config) **
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;configuration&gt;</span>
+  <span class="nt">&lt;configSections&gt;</span>
+    <span class="nt">&lt;section</span> <span class="na">name=</span><span class="s">&quot;log4net&quot;</span> <span class="na">type=</span><span class="s">&quot;log4net.Config.Log4NetConfigurationSectionHandler, log4net&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;section</span> <span class="na">name=</span><span class="s">&quot;cdbcService&quot;</span> <span class="na">type=</span><span class="s">&quot;CdbcServiceUtils.Config.CdbcConfigurationSectionHandler, CdbcServiceUtils&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/configSections&gt;</span>
+  <span class="nt">&lt;system.web&gt;</span>
+    <span class="nt">&lt;compilation</span> <span class="na">targetFramework=</span><span class="s">&quot;4.5&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;httpRuntime</span> <span class="na">targetFramework=</span><span class="s">&quot;4.5&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;authentication</span> <span class="na">mode=</span><span class="s">&quot;Windows&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;customErrors</span>  <span class="na">mode=</span><span class="s">&quot;On&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/system.web&gt;</span>
+  <span class="nt">&lt;system.serviceModel&gt;</span>
+    <span class="nt">&lt;bindings&gt;</span>
+      <span class="nt">&lt;basicHttpBinding&gt;</span>
+        <span class="nt">&lt;binding</span> <span class="na">maxReceivedMessageSize=</span><span class="s">&quot;5798464&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/binding&gt;</span>
+      <span class="nt">&lt;/basicHttpBinding&gt;</span>
+      <span class="nt">&lt;basicHttpsBinding&gt;</span>
+        <span class="nt">&lt;binding</span> <span class="na">maxReceivedMessageSize=</span><span class="s">&quot;5798464&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/binding&gt;</span>
+      <span class="nt">&lt;/basicHttpsBinding&gt;</span>
+    <span class="nt">&lt;/bindings&gt;</span>
+    <span class="nt">&lt;behaviors&gt;</span>
+      <span class="nt">&lt;serviceBehaviors&gt;</span>
+        <span class="nt">&lt;behavior&gt;</span>
+          <span class="nt">&lt;serviceMetadata</span> <span class="na">httpGetEnabled=</span><span class="s">&quot;false&quot;</span> <span class="na">httpsGetEnabled=</span><span class="s">&quot;false&quot;</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;serviceDebug</span> <span class="na">includeExceptionDetailInFaults=</span><span class="s">&quot;false&quot;</span> <span class="na">httpHelpPageEnabled=</span><span class="s">&quot;false&quot;</span> <span class="na">httpsHelpPageEnabled=</span><span class="s">&quot;false&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/behavior&gt;</span>
+      <span class="nt">&lt;/serviceBehaviors&gt;</span>
+    <span class="nt">&lt;/behaviors&gt;</span>
+    <span class="nt">&lt;protocolMapping&gt;</span>
+        <span class="nt">&lt;add</span> <span class="na">binding=</span><span class="s">&quot;basicHttpsBinding&quot;</span> <span class="na">scheme=</span><span class="s">&quot;https&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/protocolMapping&gt;</span>    
+    <span class="nt">&lt;serviceHostingEnvironment</span> <span class="na">aspNetCompatibilityEnabled=</span><span class="s">&quot;true&quot;</span> <span class="na">multipleSiteBindingsEnabled=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/system.serviceModel&gt;</span>
+
+  <span class="nt">&lt;system.webServer&gt;</span>
+    <span class="nt">&lt;modules</span> <span class="na">runAllManagedModulesForAllRequests=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;directoryBrowse</span> <span class="na">enabled=</span><span class="s">&quot;false&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/system.webServer&gt;</span>
+
+  <span class="nt">&lt;cdbcService&gt;</span>
+<span class="hll">    <span class="nt">&lt;userAuthentication</span> <span class="na">authMethod=</span><span class="s">&quot;UserPsk&quot;</span><span class="nt">&gt;</span>
+</span>      <span class="nt">&lt;authenticatedUsers&gt;</span>
+<span class="hll">        <span class="nt">&lt;add</span> <span class="na">userId=</span><span class="s">&quot;****&quot;</span> <span class="na">userPsk=</span><span class="s">&quot;&quot;</span> <span class="na">comment=</span><span class="s">&quot;&quot;</span> <span class="nt">/&gt;</span>
+</span>      <span class="nt">&lt;/authenticatedUsers&gt;</span>
+    <span class="nt">&lt;/userAuthentication&gt;</span>
+<span class="hll">    <span class="nt">&lt;clientApplicationAuthentication</span> <span class="na">authMethod=</span><span class="s">&quot;ApplicationPsk&quot;</span><span class="nt">&gt;</span>
+</span>      <span class="nt">&lt;authenticatedApplications&gt;</span>
+<span class="hll">        <span class="nt">&lt;add</span> <span class="na">applicationId=</span><span class="s">&quot;****&quot;</span> <span class="na">applicationPsk=</span><span class="s">&quot;&quot;</span> <span class="na">comment=</span><span class="s">&quot;&quot;</span> <span class="nt">/&gt;</span>
+</span>      <span class="nt">&lt;/authenticatedApplications&gt;</span>
+    <span class="nt">&lt;/clientApplicationAuthentication&gt;</span>
+        <span class="nt">&lt;idps</span> <span class="na">enabled=</span><span class="s">&quot;true&quot;</span> 
+          <span class="na">accessBlockApplicationFailureCount=</span><span class="s">&quot;3&quot;</span>           
+          <span class="na">accessBlockUserFailureCount=</span><span class="s">&quot;4&quot;</span> 
+          <span class="na">accessBlockIpAdressFailureCount=</span><span class="s">&quot;5&quot;</span> 
+          <span class="na">accessBlockSeconds=</span><span class="s">&quot;5&quot;</span> 
+          <span class="na">failureResetSeconds=</span><span class="s">&quot;600&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;connectionStrings&gt;</span>
+<span class="hll">      <span class="nt">&lt;add</span> <span class="na">name=</span><span class="s">&quot;****&quot;</span> <span class="na">connectionString=</span><span class="s">&quot;&quot;</span> <span class="na">providerName=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+</span>    <span class="nt">&lt;/connectionStrings&gt;</span>
+    <span class="nt">&lt;cdbcServiceInfo</span> <span class="na">serviceVersion=</span><span class="s">&quot;4.5.1.1906&quot;</span> <span class="na">supportedClientVersion=</span><span class="s">&quot;4.5.1.1906&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/cdbcService&gt;</span>
+  <span class="nt">&lt;log4net&gt;</span>
+    <span class="nt">&lt;appender</span> <span class="na">name=</span><span class="s">&quot;RollingLogFileAppenderSystem&quot;</span> <span class="na">type=</span><span class="s">&quot;log4net.Appender.RollingFileAppender,log4net&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;File&quot;</span> <span class="na">value=</span><span class="s">&quot;C:\logs\cdbc\CdbcClient.&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;AppendToFile&quot;</span> <span class="na">value=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;MaxSizeRollBackups&quot;</span> <span class="na">value=</span><span class="s">&quot;10&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;MaximumFileSize&quot;</span> <span class="na">value=</span><span class="s">&quot;5MB&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;RollingStyle&quot;</span> <span class="na">value=</span><span class="s">&quot;date&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;StaticLogFileName&quot;</span> <span class="na">value=</span><span class="s">&quot;false&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;DatePattern&quot;</span> <span class="na">value=</span><span class="s">&quot;&amp;quot;.&amp;quot;yyyyMMdd&amp;quot;.log&amp;quot;&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;layout</span> <span class="na">type=</span><span class="s">&quot;log4net.Layout.PatternLayout,log4net&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;ConversionPattern&quot;</span> <span class="na">value=</span><span class="s">&quot;%d [%t] %5p (%C:%M:%L) - %m%n&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;/layout&gt;</span>
+    <span class="nt">&lt;/appender&gt;</span>
+    <span class="nt">&lt;appender</span> <span class="na">name=</span><span class="s">&quot;RollingLogFileAppenderAudit&quot;</span> <span class="na">type=</span><span class="s">&quot;log4net.Appender.RollingFileAppender,log4net&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;File&quot;</span> <span class="na">value=</span><span class="s">&quot;C:\logs\cdbc\CdbcAudit.&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;AppendToFile&quot;</span> <span class="na">value=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;MaxSizeRollBackups&quot;</span> <span class="na">value=</span><span class="s">&quot;10&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;MaximumFileSize&quot;</span> <span class="na">value=</span><span class="s">&quot;5MB&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;RollingStyle&quot;</span> <span class="na">value=</span><span class="s">&quot;date&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;StaticLogFileName&quot;</span> <span class="na">value=</span><span class="s">&quot;false&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;DatePattern&quot;</span> <span class="na">value=</span><span class="s">&quot;&amp;quot;.&amp;quot;yyyyMMdd&amp;quot;.log&amp;quot;&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;layout</span> <span class="na">type=</span><span class="s">&quot;log4net.Layout.PatternLayout,log4net&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;ConversionPattern&quot;</span> <span class="na">value=</span><span class="s">&quot;%d [%t] %5p (%C:%M:%L) - %m%n&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;/layout&gt;</span>
+    <span class="nt">&lt;/appender&gt;</span>
+    <span class="nt">&lt;logger</span> <span class="na">name=</span><span class="s">&quot;audit&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;appender-ref</span> <span class="na">ref=</span><span class="s">&quot;RollingLogFileAppenderAudit&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/logger&gt;</span>
+    <span class="nt">&lt;logger</span> <span class="na">name=</span><span class="s">&quot;system&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;appender-ref</span> <span class="na">ref=</span><span class="s">&quot;RollingLogFileAppenderSystem&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/logger&gt;</span>
+  <span class="nt">&lt;/log4net&gt;</span>
+<span class="nt">&lt;/configuration&gt;</span>
+</pre></div></p>
+<p>**  Client configuration use https  (app.config) **  <br />
+Add following setting into you app.config
+<div class="codehilite"><pre><span></span>  <span class="nt">&lt;system.serviceModel&gt;</span>
+        <span class="nt">&lt;bindings&gt;</span>
+          <span class="nt">&lt;basicHttpsBinding&gt;</span>
+            <span class="nt">&lt;binding</span> <span class="na">name=</span><span class="s">&quot;CdbcService&quot;</span> <span class="na">maxReceivedMessageSize=</span><span class="s">&quot;5798464&quot;</span> <span class="nt">/&gt;</span>
+          <span class="nt">&lt;/basicHttpsBinding&gt;</span>
+        <span class="nt">&lt;/bindings&gt;</span>
+        <span class="nt">&lt;client&gt;</span>
+<span class="hll">          <span class="nt">&lt;endpoint</span> <span class="na">address=</span><span class="s">&quot;***Your service url&quot;</span> 
+</span>                    <span class="na">binding=</span><span class="s">&quot;basicHttpsBinding&quot;</span> 
+                    <span class="na">bindingConfiguration=</span><span class="s">&quot;CdbcService&quot;</span>
+                    <span class="na">contract=</span><span class="s">&quot;CdbcService.ICdbcService&quot;</span> 
+                    <span class="na">name=</span><span class="s">&quot;CdbcService.ICdbcService&quot;</span>  <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/client&gt;</span>
+  <span class="nt">&lt;/system.serviceModel&gt;</span>
+</pre></div></p>
+<p>**  Client configuration use http  (app.config) ** <br />
+Add following setting into you app.config
+<div class="codehilite"><pre><span></span>  <span class="nt">&lt;system.serviceModel&gt;</span>
+        <span class="nt">&lt;bindings&gt;</span>
+          <span class="nt">&lt;basicHttpBinding&gt;</span>
+            <span class="nt">&lt;binding</span> <span class="na">name=</span><span class="s">&quot;CdbcService&quot;</span> <span class="na">maxReceivedMessageSize=</span><span class="s">&quot;5798464&quot;</span> <span class="nt">/&gt;</span>
+          <span class="nt">&lt;/basicHttpBinding&gt;</span>
+        <span class="nt">&lt;/bindings&gt;</span>
+        <span class="nt">&lt;client&gt;</span>
+<span class="hll">          <span class="nt">&lt;endpoint</span> <span class="na">address=</span><span class="s">&quot;***Your service url&quot;</span> 
+</span>                    <span class="na">binding=</span><span class="s">&quot;basicHttpBinding&quot;</span> 
+                    <span class="na">bindingConfiguration=</span><span class="s">&quot;CdbcService&quot;</span>
+                    <span class="na">contract=</span><span class="s">&quot;CdbcService.ICdbcService&quot;</span> 
+                    <span class="na">name=</span><span class="s">&quot;CdbcService.ICdbcService&quot;</span>  <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/client&gt;</span>
+  <span class="nt">&lt;/system.serviceModel&gt;</span>
+</pre></div></p></article></div></div></main><footer class="md-footer"><div class="md-footer-nav"><nav class="md-footer-nav__inner md-grid"><a href="../../usingcdbcclient/clientconfiguration/" title="Client Configuration" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev"><div class="md-flex__cell md-flex__cell--shrink"><i class="md-icon md-icon--arrow-back md-footer-nav__button"></i></div><div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span class="md-flex__ellipsis"><span class="md-footer-nav__direction">Previous</span>Client Configuration</span></div></a><a href="../basicauthconfig/" title="IIS Basic auth" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next"><div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span class="md-flex__ellipsis"><span class="md-footer-nav__direction">Next</span>IIS Basic auth</span></div><div class="md-flex__cell md-flex__cell--shrink"><i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i></div></a></nav></div><div class="md-footer-meta md-typeset"><div class="md-footer-meta__inner md-grid"><div class="md-footer-copyright"><div class="md-footer-copyright__highlight">Copyright &copy; <a href="https://www.ricct.com">RiCCT</a> and/or its affiliates. All rights reserved.</div>powered by <a href="https://www.mkdocs.org">MkDocs</a> and <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a></div><div class="md-footer-social"><link rel="stylesheet" href="../../assets/fonts/font-awesome.css"> <a href="https://www.ricct.com" class="md-footer-social__link fa fa-globe"></a>  <a href="https://github.com/ricct/cdbc" class="md-footer-social__link fa fa-github"></a>  <a href="https://twitter.com/InstituteCloud" class="md-footer-social__link fa fa-twitter"></a> </div></div></div></footer></div><script src="../../assets/javascripts/application.b260a35d.js"></script><script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script></body></html>
