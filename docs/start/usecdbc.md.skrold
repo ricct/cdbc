@@ -1,0 +1,34 @@
+# How to use CDBC
+
+## Step1: CDBC service set up
+
+### 1.1 Download CDBC service
+<a href="/start/download/" target="_blank">:fa-external-link: Cdbc download page</a> 
+
+### 1.2 Setup IIS
+<a href="/setupservice/installiis/" target="_blank">:fa-external-link: Install IIS</a> 
+
+### 1.3 Deploy  CDBC service
+<a href="/setupservice/deployservice/" target="_blank">:fa-external-link: Deploy CDBC service</a> 
+
+### 1.4 Configure CDBC service
+We provide samples on the following page, You can use them as a reference  
+<a href="/examples/configuration/" target="_blank">:fa-external-link: Configure CDBC service</a> 
+
+---------------------------------------
+## Step2: CDBC Client download and configure
+### 2.1 Download CDBC client
+CDBC Client is published on Nuget  
+<a href="https://www.nuget.org/packages/Cdbc.Data/" target="_blank">:fa-external-link: Cdbc Client latest version on NuGet</a>  
+You can use any tool to get it.
+
+
+### 2.2 Configure CDBC client
+To connect to CDBC service, you need add `<system.serviceModel>` section into your app.config.
+
+We provide samples on the following page, You can use them as a reference  
+<a href="/examples/configuration/" target="_blank">:fa-external-link: Configure CDBC service</a> 
+
+
+## Step3: Start your development
+

@@ -1,0 +1,19 @@
+# How to get CDBC
+## CDBC service download
+
+CDBC service is wcf service and it should be deployed to the Windows IIS server.
+
+**You must accept the <a href="/license/licenseservice/" target="_blank">License Agreement</a> to download this software.**
+### <a href="/bin/CdbcService_4.1.1907.zip" onclick= "ga('send', 'pageview', '/bin/CdbcService_4.1.1907.zip')" target="_blank">:fa-download: Cdbc service latest version (CdbcService_4.1.1907)</a> 
+
+!!! note  "Extraction password:"
+    **WelcomeToCdbc**
+
+---------------------------------------
+## CDBC Client download
+
+CDBC Client includes dlls which can access CDBC service.
+### <a href="https://www.nuget.org/packages/Cdbc.Data/" target="_blank">:fa-external-link: Cdbc Client latest version on NuGet</a> 
+
+
+
