@@ -796,11 +796,23 @@ Enable Loading User Profiles for Web Apps.<br />
 
 <details>
 <summary>Get '(413) Request Entity Too Large' error .</summary>
+You need to change maxReceivedMessageSize value in both Service and Client config files.<br />
+CDBC Service <br />
 Open web.config and change maxReceivedMessageSize in system.serviceModel session.<br />
 
 e.g.
 <div class="highlight"><pre><span></span><code>&lt;binding maxReceivedMessageSize=&quot;4194304&quot;&gt;
 </code></pre></div>
+
+
+CDBC Client<br />
+
+Open app.config and change maxReceivedMessageSize in system.serviceModel session.<br />
+
+e.g.
+<div class="highlight"><pre><span></span><code>  &lt;binding name=&quot;CdbcService&quot; maxReceivedMessageSize=&quot;4194304&quot;&gt;
+</code></pre></div>
+
 
 
 </details>

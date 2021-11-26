@@ -918,7 +918,7 @@ Add system.serviceModel section into your app.config or web.config.</p>
 <p>Used to configuration communication mechanism and endpoint while connecting to cdbc service.<br />
 Add the following setting into your app.config.</p>
 </div>
-<p>XML example  <br />
+<p>XML example (http)  <br />
 <div class="highlight"><pre><span></span><code>  <span class="nt">&lt;system.serviceModel&gt;</span>
         <span class="nt">&lt;bindings&gt;</span>
           <span class="nt">&lt;basicHttpBinding&gt;</span>
@@ -926,7 +926,7 @@ Add the following setting into your app.config.</p>
           <span class="nt">&lt;/basicHttpBinding&gt;</span>
         <span class="nt">&lt;/bindings&gt;</span>
         <span class="nt">&lt;client&gt;</span>
-          <span class="nt">&lt;endpoint</span> <span class="na">address=</span><span class="s">&quot;***Your service url&quot;</span> 
+          <span class="nt">&lt;endpoint</span> <span class="na">address=</span><span class="s">&quot;Your service url e.g.  http://********/CdbcService/CdbcService.svc&quot;</span> 
                     <span class="na">binding=</span><span class="s">&quot;basicHttpBinding&quot;</span> 
                     <span class="na">bindingConfiguration=</span><span class="s">&quot;CdbcService&quot;</span>
                     <span class="na">contract=</span><span class="s">&quot;CdbcService.ICdbcService&quot;</span> 
@@ -934,6 +934,9 @@ Add the following setting into your app.config.</p>
         <span class="nt">&lt;/client&gt;</span>
   <span class="nt">&lt;/system.serviceModel&gt;</span>
 </code></pre></div></p>
+<p>Detailed example<br />
+Case 1. <a href="/examples/configuration/anonymousauthconfig/">IIS use anonymous authentication</a><br />
+Case 2. <a href="/examples/configuration/basicauthconfig/">IIS use basic authentication</a>  </p>
 <h4 id="bindings"><code>&lt;bindings&gt;</code></h4>
 <div class="admonition abstract">
 <p class="admonition-title">Description</p>
