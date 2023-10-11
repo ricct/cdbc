@@ -2,122 +2,122 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://cdbc.ricct.com/</loc>
-         <lastmod>2023-03-06</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cdbc.ricct.com/languages/</loc>
-         <lastmod>2023-03-06</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cdbc.ricct.com/examples/configuration/</loc>
-         <lastmod>2023-03-06</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cdbc.ricct.com/examples/configuration/anonymousauthconfig/</loc>
-         <lastmod>2023-03-06</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cdbc.ricct.com/examples/configuration/basicauthconfig/</loc>
-         <lastmod>2023-03-06</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cdbc.ricct.com/examples/samplecode/cdbcclientsample/</loc>
-         <lastmod>2023-03-06</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cdbc.ricct.com/examples/samplecode/cdbcsamplesystem/</loc>
-         <lastmod>2023-03-06</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cdbc.ricct.com/faq/faqlicense/</loc>
-         <lastmod>2023-03-06</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cdbc.ricct.com/faq/faqsupport/</loc>
-         <lastmod>2023-03-06</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cdbc.ricct.com/faq/faqtechnical/</loc>
-         <lastmod>2023-03-06</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cdbc.ricct.com/faq/tips/</loc>
-         <lastmod>2023-03-06</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cdbc.ricct.com/license/</loc>
-         <lastmod>2023-03-06</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cdbc.ricct.com/license/licenseclient/</loc>
-         <lastmod>2023-03-06</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cdbc.ricct.com/license/licenseservice/</loc>
-         <lastmod>2023-03-06</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cdbc.ricct.com/license/thirdparty/</loc>
-         <lastmod>2023-03-06</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cdbc.ricct.com/setupservice/</loc>
-         <lastmod>2023-03-06</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cdbc.ricct.com/setupservice/configservice/</loc>
-         <lastmod>2023-03-06</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cdbc.ricct.com/setupservice/deployservice/</loc>
-         <lastmod>2023-03-06</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cdbc.ricct.com/setupservice/installiis/</loc>
-         <lastmod>2023-03-06</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cdbc.ricct.com/start/download/</loc>
-         <lastmod>2023-03-06</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cdbc.ricct.com/start/trycdbc/</loc>
-         <lastmod>2023-03-06</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cdbc.ricct.com/start/usecdbc/</loc>
-         <lastmod>2023-03-06</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cdbc.ricct.com/usingcdbcclient/clientconfiguration/</loc>
-         <lastmod>2023-03-06</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://cdbc.ricct.com/usingcdbcclient/clientinstall/</loc>
-         <lastmod>2023-03-06</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
